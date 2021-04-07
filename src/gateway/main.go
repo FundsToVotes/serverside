@@ -1,10 +1,10 @@
 package main
 
 import (
-	"assignments-jhoupps/servers/gateway/handlers"
 	"log"
 	"net/http"
 	"os"
+	"gateway/handlers"
 )
 
 //main is the main entry point for the server

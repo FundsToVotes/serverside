@@ -1,10 +1,10 @@
 #!/bin/bash
-docker stop webserver
-docker rm -f webserver
+docker stop ftvgateway
+docker rm -f ftvgateway
 docker run -d -p 80:80 \
---name webserver \
+--name ftvgateway \
 -v /etc/letsencrypt:/etc/letsencrypt:ro \
-legaciesdev/webserver
+jhoupps/ftvgateway
 
 
 #--env TLSCERT="/etc/letsencrypt/live/api.jayhouppermans.me/fullchain.pem" \

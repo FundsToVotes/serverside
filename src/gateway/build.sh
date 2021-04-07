@@ -2,5 +2,5 @@
 
 GOOS=linux go build
 go build .
-docker build -t jhoupps/deployapi .
+docker build -t jhoupps/ftvgateway .
 go clean
