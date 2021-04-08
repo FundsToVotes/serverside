@@ -14,6 +14,6 @@
 7. x___create certificates 
     + https://drstearns.github.io/tutorials/https/#secrunletsencryptonamazonlinux2
 8. x___Copy these files into my development directory
-10. Create a docker hub account if necessary
-9. run and deploy the Hello Handler to test it
-10. Refine these instructions as necessary for future me's benefit
+10. x___Create a docker hub account if necessary
+9. x___run and deploy the Hello Handler to test it
+10. x___Refine these instructions as necessary for future me's benefit
