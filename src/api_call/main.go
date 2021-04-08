@@ -1,11 +1,13 @@
 package main
 
 import (
+	"encoding/csv"
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
 	"log"
 	"net/http"
+	"os"
 )
 
 // Relevant tutorials
@@ -61,32 +63,52 @@ func main() {
 		log.Fatal(err)
 	} */
 
-	client := &http.Client{}
+	crp_ids := readCSV()
+	for count, id := range crp_ids {
+		if count < 5 {
+			client := &http.Client{}
 
-	req, err := http.NewRequest("GET", "http://www.opensecrets.org/api/?method=candIndustry&cid=N00007360&cycle=2020&apikey=c3fd74a75e5cb8756e262e8d2f0480b3&output=json", nil)
+			request_url := "http://www.opensecrets.org/api/?method=candIndustry&cid=" + id[0] + "&cycle=2020&apikey=c3fd74a75e5cb8756e262e8d2f0480b3&output=json"
+			req, err := http.NewRequest("GET", request_url, nil)
+			if err != nil {
+				log.Fatalln(err)
+			}
+
+			req.Header.Set("User-Agent", "Golang_Funds_To_Votes_Bot")
+
+			response, err := client.Do(req)
+			if err != nil {
+				log.Fatalln(err)
+			}
+
+			responseData, err := ioutil.ReadAll(response.Body)
+			if err != nil {
+				log.Printf("Error in reading response")
+				log.Fatal(err)
+			}
+
+			//Create an empty instance of a Congressperson to recieve JSON
+			congressperson := &Congressperson{}
+			json.Unmarshal(responseData, congressperson)
+
+			fmt.Println(congressperson.Response.Industries.Attributes.CandName)
+			for _, industry := range congressperson.Response.Industries.Industry {
+				fmt.Print(industry.Attributes.IndustryName + ", ")
+			}
+			fmt.Println("")
+		}
+	}
+}
+
+func readCSV() [][]string {
+
+	file, err := os.Open("just_crp_ids.csv")
 	if err != nil {
-		log.Fatalln(err)
+		fmt.Println(err)
 	}
+	reader := csv.NewReader(file)
+	records, _ := reader.ReadAll()
 
-	req.Header.Set("User-Agent", "Golang_Funds_To_Votes_Bot")
+	return records
 
-	response, err := client.Do(req)
-	if err != nil {
-		log.Fatalln(err)
-	}
-
-	responseData, err := ioutil.ReadAll(response.Body)
-	if err != nil {
-		log.Printf("Error in reading response")
-		log.Fatal(err)
-	}
-
-	//Create an empty instance of a Congressperson to recieve JSON
-	congressperson := &Congressperson{}
-	json.Unmarshal(responseData, congressperson)
-
-	fmt.Println(congressperson.Response.Industries.Attributes.CandName)
-	for _, industry := range congressperson.Response.Industries.Industry {
-		fmt.Println(industry.Attributes.IndustryName)
-	}
 }
