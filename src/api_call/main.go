@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"io/ioutil"
 	"log"
@@ -18,7 +19,40 @@ https://www.soberkoder.com/consume-rest-api-go/
 /* Dev notes
 - apparently i needed a user-agent, and got a cloudflare error when I didnt have it
 CRP IDs: - N00007360 for Nancy Pelosi
+
+Process:
+- read the csv and get a bunch of IDs
+- x____make the api request
+- x___store the api request in some structs
+- store the struct content in a DB
 */
+
+//Data structures
+type Congressperson struct {
+	Response struct {
+		Industries struct {
+			Attributes struct {
+				CandName    string `json:"cand_name"`
+				Cid         string `json:"cid"`
+				Cycle       string `json:"cycle"`
+				Origin      string `json:"origin"`
+				Source      string `json:"source"`
+				LastUpdated string `json:"last_updated"`
+			} `json:"@attributes"`
+			Industry []struct {
+				Attributes struct {
+					IndustryCode string `json:"industry_code"`
+					IndustryName string `json:"industry_name"`
+					Indivs       string `json:"indivs"`
+					Pacs         string `json:"pacs"`
+					Total        string `json:"total"`
+				} `json:"@attributes"`
+			} `json:"industry"`
+		} `json:"industries"`
+	} `json:"response"`
+}
+
+//Code
 func main() {
 
 	/*response, err := http.Get("http://www.opensecrets.org/api/?method=candIndustry&cid=N00007360&cycle=2020&apikey=c3fd74a75e5cb8756e262e8d2f0480b3")
@@ -29,7 +63,7 @@ func main() {
 
 	client := &http.Client{}
 
-	req, err := http.NewRequest("GET", "http://www.opensecrets.org/api/?method=candIndustry&cid=N00007360&cycle=2020&apikey=c3fd74a75e5cb8756e262e8d2f0480b3", nil)
+	req, err := http.NewRequest("GET", "http://www.opensecrets.org/api/?method=candIndustry&cid=N00007360&cycle=2020&apikey=c3fd74a75e5cb8756e262e8d2f0480b3&output=json", nil)
 	if err != nil {
 		log.Fatalln(err)
 	}
@@ -47,7 +81,12 @@ func main() {
 		log.Fatal(err)
 	}
 
-	log.Printf("No error detected")
-	fmt.Println(string(responseData))
+	//Create an empty instance of a Congressperson to recieve JSON
+	congressperson := &Congressperson{}
+	json.Unmarshal(responseData, congressperson)
 
+	fmt.Println(congressperson.Response.Industries.Attributes.CandName)
+	for _, industry := range congressperson.Response.Industries.Industry {
+		fmt.Println(industry.Attributes.IndustryName)
+	}
 }
