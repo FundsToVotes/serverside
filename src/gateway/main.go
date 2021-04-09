@@ -1,10 +1,10 @@
 package main
 
 import (
+	"gateway/handlers"
 	"log"
 	"net/http"
 	"os"
-	"gateway/handlers"
 )
 
 //main is the main entry point for the server
@@ -34,6 +34,7 @@ func main() {
 	//Tell the mux to call your handlers.SummaryHandler function
 	//	when the "/v1/summary" URL path is requested.
 	mux.HandleFunc("/hello", handlers.HelloHandler)
+	mux.HandleFunc("/topten", handlers.DummyTopTenHandler)
 
 	//Start a web server listening on the address you read from
 	//	the environment variable, using the mux you created as

@@ -23,7 +23,7 @@ https://www.soberkoder.com/consume-rest-api-go/
 CRP IDs: - N00007360 for Nancy Pelosi
 
 Process:
-- read the csv and get a bunch of IDs
+- x____read the csv and get a bunch of IDs
 - x____make the api request
 - x___store the api request in some structs
 - store the struct content in a DB
@@ -91,7 +91,16 @@ func main() {
 			congressperson := &Congressperson{}
 			json.Unmarshal(responseData, congressperson)
 
+			fmt.Println("~")
 			fmt.Println(congressperson.Response.Industries.Attributes.CandName)
+			fmt.Println()
+
+			fmt.Println("Raw Json")
+			// Convert response body to string
+			bodyString := string(responseData)
+			fmt.Println(bodyString)
+			fmt.Println("")
+
 			for _, industry := range congressperson.Response.Industries.Industry {
 				fmt.Print(industry.Attributes.IndustryName + ", ")
 			}
