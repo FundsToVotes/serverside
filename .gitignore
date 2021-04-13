@@ -1,3 +1,7 @@
+# Self signed certs
+privkey.pem
+fullchain.pem
+
 # Binaries for programs and plugins
 *.exe
 *.exe~

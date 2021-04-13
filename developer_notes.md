@@ -21,6 +21,16 @@
         > Done: Not Done 
 
         > Via: Custom Back end
+* Finance API plan: 
+    + Inside APi folder 
+        > function that calls the relevant APIs and spits out data
+            >> Inserts new things in the database
+            >> Updates not-new things
+        > Function for emptying database (developer use only) 
+    + Inside gateway
+        > Gethandler for getting Data from the database
+    + On server
+        > Chron job to call the API .exe every day
 * Daily job to call all relevant APIs
 * Load data into a SQL relational database
     > Use the categories of propublica to open secrets to compare bills to finance. Apparently there’s a list on congress.gov

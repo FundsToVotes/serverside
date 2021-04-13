@@ -1,13 +1,14 @@
 package main
 
 import (
-	"encoding/csv"
+	"api_call/fetchdata"
+	"api_call/useDB"
+	"database/sql"
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
 	"log"
 	"net/http"
-	"os"
 )
 
 // Relevant tutorials
@@ -54,16 +55,25 @@ type Congressperson struct {
 	} `json:"response"`
 }
 
+/*Next Task
+
+  + Inside APi folder
+      > function that calls the relevant APIs and spits out data
+          >> Inserts new things in the database
+          >> Updates not-new things
+      > Function for emptying database (developer use only)
+*/
 //Code
 func main() {
-
-	/*response, err := http.Get("http://www.opensecrets.org/api/?method=candIndustry&cid=N00007360&cycle=2020&apikey=c3fd74a75e5cb8756e262e8d2f0480b3")
+	//Open a mysql database
+	db, err := sql.Open("mysql", dsn)
 	if err != nil {
-		log.Printf("Error in fetching response")
 		log.Fatal(err)
-	} */
+	}
+	//Initialize my user Store
+	sqlStore := useDB.NewMySQLStore(db)
 
-	crp_ids := readCSV()
+	crp_ids := fetchdata.ReadCSV()
 	for count, id := range crp_ids {
 		if count < 5 {
 			client := &http.Client{}
@@ -105,19 +115,9 @@ func main() {
 				fmt.Print(industry.Attributes.IndustryName + ", ")
 			}
 			fmt.Println("")
+
+			//Inserting into the db
+			sqlStore.Insert(congressperson)
 		}
 	}
-}
-
-func readCSV() [][]string {
-
-	file, err := os.Open("just_crp_ids.csv")
-	if err != nil {
-		fmt.Println(err)
-	}
-	reader := csv.NewReader(file)
-	records, _ := reader.ReadAll()
-
-	return records
-
 }
