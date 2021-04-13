@@ -1,7 +1,6 @@
 package useDB
 
-import "database/sql"
-
+/*
 //MySQLStore is the struct for the sql store and is broken
 type MySQLStore struct {
 	conn *sql.DB
@@ -9,8 +8,8 @@ type MySQLStore struct {
 
 //NewMySQLStore creates a new mysqlstore object, but is broken
 func NewMySQLStore(db *sql.DB) *MySQLStore {
-	/*dsn := fmt.Sprintf("root:%s@tcp(127.0.0.1:3306)/demo", mysqlRootPW)
-	 */
+	//dsn := fmt.Sprintf("root:%s@tcp(127.0.0.1:3306)/demo", mysqlRootPW)
+
 	return &MySQLStore{
 		conn: db,
 	}
@@ -34,3 +33,5 @@ func Insert(cp *Congressperson) (*Congressperson, error) {
 	cp.ID = id
 	return cp, nil
 }
+
+*/

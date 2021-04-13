@@ -3,12 +3,13 @@ package main
 import (
 	"api_call/fetchdata"
 	"api_call/useDB"
-	"database/sql"
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
 	"log"
 	"net/http"
+
+	_ "github.com/go-sql-driver/mysql"
 )
 
 // Relevant tutorials
@@ -17,6 +18,8 @@ import (
 https://tutorialedge.net/golang/consuming-restful-api-with-go/
 
 https://www.soberkoder.com/consume-rest-api-go/
+
+https://golangbot.com/connect-create-db-mysql/
 */
 
 /* Dev notes
@@ -30,31 +33,6 @@ Process:
 - store the struct content in a DB
 */
 
-//Data structures
-type Congressperson struct {
-	Response struct {
-		Industries struct {
-			Attributes struct {
-				CandName    string `json:"cand_name"`
-				Cid         string `json:"cid"`
-				Cycle       string `json:"cycle"`
-				Origin      string `json:"origin"`
-				Source      string `json:"source"`
-				LastUpdated string `json:"last_updated"`
-			} `json:"@attributes"`
-			Industry []struct {
-				Attributes struct {
-					IndustryCode string `json:"industry_code"`
-					IndustryName string `json:"industry_name"`
-					Indivs       string `json:"indivs"`
-					Pacs         string `json:"pacs"`
-					Total        string `json:"total"`
-				} `json:"@attributes"`
-			} `json:"industry"`
-		} `json:"industries"`
-	} `json:"response"`
-}
-
 /*Next Task
 
   + Inside APi folder
@@ -65,17 +43,34 @@ type Congressperson struct {
 */
 //Code
 func main() {
-	//Open a mysql database
-	db, err := sql.Open("mysql", dsn)
-	if err != nil {
-		log.Fatal(err)
-	}
-	//Initialize my user Store
-	sqlStore := useDB.NewMySQLStore(db)
+	/*
+		//Open a mysql database
+		db, err := sql.Open("mysql", dsn)
+		if err != nil {
+			log.Fatal(err)
+		}
+		//Initialize my user Store
+		sqlStore := useDB.NewMySQLStore(db)
+	*/
 
+	//*********Managing the DB*******
+	db, err := useDB.Connect()
+	if err != nil {
+		log.Printf("Error %s when getting db connection", err)
+		return
+	}
+	defer db.Close()
+	log.Printf("Successfully connected to database")
+	err = useDB.CreateTopTenTable(db)
+	if err != nil {
+		log.Printf("Create top ten table failed with error %s", err)
+		return
+	}
+
+	//Managing the data
 	crp_ids := fetchdata.ReadCSV()
 	for count, id := range crp_ids {
-		if count < 5 {
+		if count < 2 {
 			client := &http.Client{}
 
 			request_url := "http://www.opensecrets.org/api/?method=candIndustry&cid=" + id[0] + "&cycle=2020&apikey=c3fd74a75e5cb8756e262e8d2f0480b3&output=json"
@@ -98,7 +93,7 @@ func main() {
 			}
 
 			//Create an empty instance of a Congressperson to recieve JSON
-			congressperson := &Congressperson{}
+			congressperson := &useDB.Congressperson{}
 			json.Unmarshal(responseData, congressperson)
 
 			fmt.Println("~")
@@ -117,7 +112,12 @@ func main() {
 			fmt.Println("")
 
 			//Inserting into the db
-			sqlStore.Insert(congressperson)
+			err = useDB.Insert(db, *congressperson)
+			if err != nil {
+				log.Printf("Insert member"+congressperson.Response.Industries.Attributes.CandName+" failed with error %s", err)
+				return
+			}
+
 		}
 	}
 }
