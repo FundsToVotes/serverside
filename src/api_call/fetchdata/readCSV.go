@@ -1,11 +1,6 @@
-package fetchdata
+//package fetchdaa
 
-import (
-	"encoding/csv"
-	"fmt"
-	"os"
-)
-
+/*
 //ReadCSV reads csvs
 func ReadCSV() [][]string {
 
@@ -19,3 +14,4 @@ func ReadCSV() [][]string {
 	return records
 
 }
+*/

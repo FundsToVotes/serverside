@@ -36,11 +36,14 @@ func main() {
 	mux.HandleFunc("/hello", handlers.HelloHandler)
 	mux.HandleFunc("/topten", handlers.DummyTopTenHandler)
 
+	//Add the CORS middleware
+	corsWrappedMux := handlers.NewCORSMiddleware(mux)
+
 	//Start a web server listening on the address you read from
 	//	the environment variable, using the mux you created as
 	//	the root handler. Use log.Fatal() to report any errors
 	//	that occur when trying to start the web server.
 	log.Printf("the server is listening at port" + addr)
-	log.Fatal(http.ListenAndServeTLS(addr, tlsCertPath, tlsKeyPath, mux)) //i dont know what this line does
+	log.Fatal(http.ListenAndServeTLS(addr, tlsCertPath, tlsKeyPath, corsWrappedMux)) //i dont know what this line does
 
 }

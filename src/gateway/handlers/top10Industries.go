@@ -29,7 +29,6 @@ type ResponseStruct struct {
 //DummyTopTenHandler returns Alma Adams's JSON data, and nobody else's. It does check that a name was provided
 func DummyTopTenHandler(w http.ResponseWriter, r *http.Request) {
 	//Add an HTTP headers to the response with the name
-	w.Header().Set("Access-Control-Allow-Origin", "*")
 	w.Header().Set("Content-Type", "application/json")
 
 	//Get the `url` query string parameter value from the request.

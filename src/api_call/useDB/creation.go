@@ -71,7 +71,7 @@ func CreateTopTenTable(db *sql.DB) error {
 	//    product_price int, created_at datetime default CURRENT_TIMESTAMP, updated_at datetime default CURRENT_TIMESTAMP)`
 	query := `CREATE TABLE IF NOT EXISTS topten(id int not null auto_increment primary key,
 		cand_name varchar(255) not null,
-		cid varchar(64) not null,
+		cid varchar(64) not null unique,
 		cycle varchar(64) not null,
 		last_updated varchar(255) not null,
 		last_updated_ftv_db datetime default CURRENT_TIMESTAMP,

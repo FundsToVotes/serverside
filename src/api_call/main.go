@@ -1,13 +1,14 @@
 package main
 
 import (
-	"api_call/fetchdata"
 	"api_call/useDB"
+	"encoding/csv"
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
 	"log"
 	"net/http"
+	"os"
 
 	_ "github.com/go-sql-driver/mysql"
 )
@@ -68,9 +69,12 @@ func main() {
 	}
 
 	//Managing the data
-	crp_ids := fetchdata.ReadCSV()
+	crp_ids := readCSV()
 	for count, id := range crp_ids {
-		if count < 2 {
+		//Skipped Count = 0 for now
+		if 7 < count && count < 50 {
+			log.Printf("Fetching and inserting crp_id " + id[0])
+
 			client := &http.Client{}
 
 			request_url := "http://www.opensecrets.org/api/?method=candIndustry&cid=" + id[0] + "&cycle=2020&apikey=c3fd74a75e5cb8756e262e8d2f0480b3&output=json"
@@ -120,4 +124,18 @@ func main() {
 
 		}
 	}
+}
+
+//ReadCSV reads csvs
+func readCSV() [][]string {
+
+	file, err := os.Open("just_crp_ids.csv")
+	if err != nil {
+		fmt.Println(err)
+	}
+	reader := csv.NewReader(file)
+	records, _ := reader.ReadAll()
+
+	return records
+
 }
