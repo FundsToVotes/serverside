@@ -2,6 +2,12 @@
 privkey.pem
 fullchain.pem
 
+#Bad practice - DB root password is in the code
+
+
+#noteworthy folders 
+/pkg/
+/bin/
 # Binaries for programs and plugins
 *.exe
 *.exe~

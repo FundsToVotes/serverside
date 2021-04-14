@@ -18,7 +18,7 @@
 
         > From: Open Secrets
 
-        > Done: Not Done 
+        > Status: As done as it's going to be until I have dummy data for Bills by Representatives 
 
         > Via: Custom Back end
 * Finance API plan: 
@@ -31,6 +31,10 @@
         > Gethandler for getting Data from the database
     + On server
         > Chron job to call the API .exe every day
+* Finance - sloppy code or unfinished things to fix later
+    + in insert.go, instead of putting current date in ftv_updated in a reasonable format, I just did time.now()
+    + CRP IDs - find a better way to get them, cause my code currently breaks on ids for people who are no longer in office
+    + handler to serve the data
 * Daily job to call all relevant APIs
 * Load data into a SQL relational database
     > Use the categories of propublica to open secrets to compare bills to finance. Apparently there’s a list on congress.gov
@@ -44,6 +48,17 @@
 * Cleanup and Optimization
     + Opensecrets top 10: 
         - Fetch CRP ID programatically rather than manual .csv file creation
+
+### Bills endpoint rambling and thoughts
+Okay, so
+I need to have several things
+* API call to the propublica database that I want - which?? (chase this down soon) 
+    +  Call by bill, get category
+* API call to the Opensecrets database
+    + Call by person, get recent bills voted on? 
+* I think I'm slightly confused about what data comes from where - I want bill information, I want opensecrets information on the industry related to this, i want bills voted on by politician
+* Goal: correlate donor industries (opensecrets) with bill categories (propublica), and use this to make a visualization
+* Putting this together will require looking at a list of donor industries and a list of bill categories
 
 ## Gameplan
 * The opensecrets only one for the top 10 sector information seems easiest
