@@ -1,0 +1,82 @@
+{
+    "status":"OK",
+    "copyright":"Copyright (c) 2021 Pro Publica Inc. All Rights Reserved.",
+    "results":[
+       {
+          "bill_id": "hr1996-117",
+          "bill_slug": "hr1996",
+            
+          "bill": "H.R.1996",
+          "bill_type": "hr",
+          "number": "H.R.1996",
+          "bill_uri": "https://api.propublica.org/congress/v1/117/bills/hr1996.json",
+          "title": "To create protections for financial institutions that provide financial services to cannabis-related legitimate businesses and service providers for such businesses, and for other purposes.",
+          "short_title": "SAFE Banking Act of 2021",
+          "sponsor_title": "Rep.",
+          "sponsor": "Ed Perlmutter",
+          "sponsor_id": "P000593",
+          "sponsor_uri": "https://api.propublica.org/congress/v1/members/P000593.json",
+          "sponsor_party": "D",
+          "sponsor_state": "CO",
+          "gpo_pdf_uri": null,
+          "congressdotgov_url": "https://www.congress.gov/bill/117th-congress/house-bill/1996",
+          "govtrack_url": "https://www.govtrack.us/congress/bills/117/hr1996",
+          "introduced_date": "2021-03-18",
+          "active": false,
+          "last_vote": "2021-04-19",
+          "house_passage": null,
+          "senate_passage": null,
+          "enacted": null,
+          "vetoed": null,
+          "cosponsors": 168,
+          "cosponsors_by_party": {"D":145,"R":23},
+          "withdrawn_cosponsors": 0,
+          "primary_subject": "Finance and Financial Sector",
+          "committees": "House Judiciary Committee",
+          "committee_codes": ["HSBA"],
+          "subcommittee_codes": [],
+          "latest_major_action_date": "2021-03-18",
+          "latest_major_action": "Referred to the Committee on Financial Services, and in addition to the Committee on the Judiciary, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
+          "house_passage_vote": null,
+          "senate_passage_vote": null,
+          "summary": "Secure and Fair Enforcement Banking Act of 2021 or the SAFE Banking Act of 2021  This bill generally prohibits a federal banking regulator from penalizing a depository institution for providing banking services to a legitimate cannabis-related business. Prohibited penalties include terminating or limiting the deposit insurance or share insurance of a depository institution solely because the institution provides financial services to a legitimate cannabis-related business and prohibiting or otherwise discouraging a depository institution from offering financial services to such a business.   Additionally, proceeds from a transaction involving activities of a legitimate cannabis-related business are not considered proceeds from unlawful activity. Proceeds from unlawful activity are subject to anti-money laundering laws.  Furthermore, a depository institution is not, under federal law, liable or subject to asset forfeiture for providing a loan or other financial services to a legitimate cannabis-related business.  The bill also provides that a federal banking agency may not request or order a depository institution to terminate a customer account unless (1) the agency has a valid reason for doing so, and (2) that reason is not based solely on reputation risk. Valid reasons for terminating an account include threats to national security and involvement in terrorist financing, including state sponsorship of terrorism. ",
+          "summary_short": "Secure and Fair Enforcement Banking Act of 2021 or the SAFE Banking Act of 2021  This bill generally prohibits a federal banking regulator from penalizing a depository institution for providing banking services to a legitimate cannabis-related business. Prohibited penalties include terminating or limiting the deposit insurance or share insurance of a depository institution solely because the institution provides financial services to a legitimate cannabis-related business and prohibiting or o...",
+          "cbo_estimate_url": null,
+          "versions":[
+          {
+            "status":"Introduced in House",
+            "title":"IH",
+            "url":"https://www.govinfo.gov/content/pkg/BILLS-117hr1996ih/xml/BILLS-117hr1996ih.xml",
+            "congressdotgov_url":"https://www.congress.gov/bill/117th-congress/house-bill/1996/text/ih"
+          }
+          ],
+          "actions":[
+          {
+            "id": 1,
+             
+            "action_type": "IntroReferral",
+            "datetime": "2021-03-18",
+            "description": "Referred to the Committee on Financial Services, and in addition to the Committee on the Judiciary, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+          }
+          ],
+          "presidential_statements":[
+ ],
+          "votes": [
+            {
+               
+              "date": "2021-04-19",
+              "time": "19:05:00",
+              "roll_call": "120",
+              "question": "On Motion to Suspend the Rules and Pass, as Amended",
+              "result": "Passed",
+              "total_yes": 321,
+              "total_no": 101,
+              "total_not_voting": 8,
+              "api_url": "https://api.propublica.org/congress/v1/117/house/sessions/1/votes/120.json"
+            }
+          ]
+ 
+       }
+    ]
+ }
+ 

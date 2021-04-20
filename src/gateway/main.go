@@ -35,6 +35,7 @@ func main() {
 	//	when the "/v1/summary" URL path is requested.
 	mux.HandleFunc("/hello", handlers.HelloHandler)
 	mux.HandleFunc("/topten", handlers.DummyTopTenHandler)
+	mux.HandleFunc("/bills", handlers.DummyBillsHandler)
 
 	//Add the CORS middleware
 	corsWrappedMux := handlers.NewCORSMiddleware(mux)

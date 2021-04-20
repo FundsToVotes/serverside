@@ -1,0 +1,613 @@
+{
+   "status":"OK",
+   "copyright":"Copyright (c) 2021 Pro Publica Inc. All Rights Reserved.",
+   "results":[
+      {
+         "member_id": "K000388",
+         "num_results": "20",
+         "offset": "0",
+         "votes": [
+           {
+           "member_id": "K000388",
+            
+             
+           "session": "1",
+           "roll_call": "121",
+           "vote_uri": "https://api.propublica.org/congress/v1/117/house/sessions/1/votes/121.json",
+           "bill": {
+             "bill_id": "hres130-117",
+             "number": "H RES 130",
+             "sponsor_id": "M001137",
+             "bill_uri": "https://api.propublica.org/congress/v1/117/bills/hres130.json",
+             "title": "Condemning the continued violation of rights and freedoms of the people of Hong Kong by the People&#39;s Republic of China and the Government of the Hong Kong Special Administrative Region.",
+             "latest_action": "Motion to reconsider laid on the table Agreed to without objection."
+           },
+           "amendment": {
+           },
+                     "description": "Condemning the continued violation of rights and freedoms of the people of Hong Kong by the PeopleΓÇÖs Republic of China and the Government of the Hong Kong Special Administrative Region",
+           "question": "On Motion to Suspend the Rules and Agree",
+           "result": "Passed",
+           "date": "2021-04-19",
+           "time": "19:36:00",
+           "total":              {
+               "yes": 418,
+               "no": 1,
+               "present": 0,
+               "not_voting": 11
+           },
+           "position": "Yes"
+         },
+                  {
+           "member_id": "K000388",
+            
+             
+           "session": "1",
+           "roll_call": "120",
+           "vote_uri": "https://api.propublica.org/congress/v1/117/house/sessions/1/votes/120.json",
+           "bill": {
+             "bill_id": "hr1996-117",
+             "number": "H R 1996",
+             "sponsor_id": "P000593",
+             "bill_uri": "https://api.propublica.org/congress/v1/117/bills/hr1996.json",
+             "title": "To create protections for financial institutions that provide financial services to cannabis-related legitimate businesses and service providers for such businesses, and for other purposes.",
+             "latest_action": "Referred to the Committee on Financial Services, and in addition to the Committee on the Judiciary, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+           },
+           "amendment": {
+           },
+                     "description": "SAFE Banking Act",
+           "question": "On Motion to Suspend the Rules and Pass, as Amended",
+           "result": "Passed",
+           "date": "2021-04-19",
+           "time": "19:05:00",
+           "total":              {
+               "yes": 321,
+               "no": 101,
+               "present": 0,
+               "not_voting": 8
+           },
+           "position": "No"
+         },
+                  {
+           "member_id": "K000388",
+            
+             
+           "session": "1",
+           "roll_call": "119",
+           "vote_uri": "https://api.propublica.org/congress/v1/117/house/sessions/1/votes/119.json",
+           "bill": {
+             "bill_id": "hr1482-117",
+             "number": "H R 1482",
+             "sponsor_id": "B001311",
+             "bill_uri": "https://api.propublica.org/congress/v1/117/bills/hr1482.json",
+             "title": "To amend the Small Business Act to enhance the Office of Credit Risk Management, to require the Administrator of the Small Business Administration to issue rules relating to environmental obligations of certified development companies, and for other purposes.",
+             "latest_action": "Received in the Senate and Read twice and referred to the Committee on Small Business and Entrepreneurship."
+           },
+           "amendment": {
+           },
+                     "description": "504 Credit Risk Management Improvement Act",
+           "question": "On Motion to Suspend the Rules and Pass",
+           "result": "Passed",
+           "date": "2021-04-16",
+           "time": "12:19:00",
+           "total":              {
+               "yes": 411,
+               "no": 8,
+               "present": 0,
+               "not_voting": 11
+           },
+           "position": "Yes"
+         },
+                  {
+           "member_id": "K000388",
+            
+             
+           "session": "1",
+           "roll_call": "118",
+           "vote_uri": "https://api.propublica.org/congress/v1/117/house/sessions/1/votes/118.json",
+           "bill": {
+             "bill_id": "hr1195-117",
+             "number": "H R 1195",
+             "sponsor_id": "C001069",
+             "bill_uri": "https://api.propublica.org/congress/v1/117/bills/hr1195.json",
+             "title": "To direct the Secretary of Labor to issue an occupational safety and health standard that requires covered employers within the health care and social service industries to develop and implement a comprehensive workplace violence prevention plan, and for other purposes.",
+             "latest_action": "Received in the Senate and Read twice and referred to the Committee on Health, Education, Labor, and Pensions."
+           },
+           "amendment": {
+           },
+                     "description": "Workplace Violence Prevention for Health Care and Social Service Workers Act",
+           "question": "On Passage",
+           "result": "Passed",
+           "date": "2021-04-16",
+           "time": "11:48:00",
+           "total":              {
+               "yes": 254,
+               "no": 166,
+               "present": 0,
+               "not_voting": 10
+           },
+           "position": "No"
+         },
+                  {
+           "member_id": "K000388",
+            
+             
+           "session": "1",
+           "roll_call": "117",
+           "vote_uri": "https://api.propublica.org/congress/v1/117/house/sessions/1/votes/117.json",
+           "bill": {
+             "bill_id": "hr1195-117",
+             "number": "H R 1195",
+             "sponsor_id": "C001069",
+             "bill_uri": "https://api.propublica.org/congress/v1/117/bills/hr1195.json",
+             "title": "To direct the Secretary of Labor to issue an occupational safety and health standard that requires covered employers within the health care and social service industries to develop and implement a comprehensive workplace violence prevention plan, and for other purposes.",
+             "latest_action": "Received in the Senate and Read twice and referred to the Committee on Health, Education, Labor, and Pensions."
+           },
+           "amendment": {
+           },
+                     "description": "Keller of Pennsylvania Part C Amendment No. 5",
+           "question": "On Agreeing to the Amendment",
+           "result": "Failed",
+           "date": "2021-04-16",
+           "time": "11:16:00",
+           "total":              {
+               "yes": 168,
+               "no": 256,
+               "present": 0,
+               "not_voting": 6
+           },
+           "position": "Yes"
+         },
+                  {
+           "member_id": "K000388",
+            
+             
+           "session": "1",
+           "roll_call": "116",
+           "vote_uri": "https://api.propublica.org/congress/v1/117/house/sessions/1/votes/116.json",
+           "bill": {
+             "bill_id": "hr1490-117",
+             "number": "H R 1490",
+             "sponsor_id": "C001119",
+             "bill_uri": "https://api.propublica.org/congress/v1/117/bills/hr1490.json",
+             "title": "To amend the Small Business Investment Act of 1958 to improve the loan guaranty program, enhance the ability of small manufacturers to access affordable capital, and for other purposes.",
+             "latest_action": "Received in the Senate and Read twice and referred to the Committee on Small Business and Entrepreneurship."
+           },
+           "amendment": {
+           },
+                     "description": "504 Modernization and Small Manufacturer Enhancement Act",
+           "question": "On Motion to Suspend the Rules and Pass",
+           "result": "Passed",
+           "date": "2021-04-15",
+           "time": "21:42:00",
+           "total":              {
+               "yes": 400,
+               "no": 16,
+               "present": 0,
+               "not_voting": 14
+           },
+           "position": "Yes"
+         },
+                  {
+           "member_id": "K000388",
+            
+             
+           "session": "1",
+           "roll_call": "115",
+           "vote_uri": "https://api.propublica.org/congress/v1/117/house/sessions/1/votes/115.json",
+           "bill": {
+             "bill_id": "hr1487-117",
+             "number": "H R 1487",
+             "sponsor_id": "B001309",
+             "bill_uri": "https://api.propublica.org/congress/v1/117/bills/hr1487.json",
+             "title": "To amend the Small Business Act to increase transparency, and for other purposes.",
+             "latest_action": "Received in the Senate and Read twice and referred to the Committee on Small Business and Entrepreneurship."
+           },
+           "amendment": {
+           },
+                     "description": "Microloan Transparency and Accountability Act",
+           "question": "On Motion to Suspend the Rules and Pass",
+           "result": "Passed",
+           "date": "2021-04-15",
+           "time": "21:10:00",
+           "total":              {
+               "yes": 409,
+               "no": 4,
+               "present": 0,
+               "not_voting": 17
+           },
+           "position": "Yes"
+         },
+                  {
+           "member_id": "K000388",
+            
+             
+           "session": "1",
+           "roll_call": "114",
+           "vote_uri": "https://api.propublica.org/congress/v1/117/house/sessions/1/votes/114.json",
+           "bill": {
+             "bill_id": "hr1502-117",
+             "number": "H R 1502",
+             "sponsor_id": "K000394",
+             "bill_uri": "https://api.propublica.org/congress/v1/117/bills/hr1502.json",
+             "title": "To amend the Small Business Act to optimize the operations of the microloan program, lower costs for small business concerns and intermediary participants in the program, and for other purposes.",
+             "latest_action": "Received in the Senate and Read twice and referred to the Committee on Small Business and Entrepreneurship."
+           },
+           "amendment": {
+           },
+                     "description": "Microloan Improvement Act",
+           "question": "On Motion to Suspend the Rules and Pass",
+           "result": "Passed",
+           "date": "2021-04-15",
+           "time": "20:36:00",
+           "total":              {
+               "yes": 397,
+               "no": 16,
+               "present": 0,
+               "not_voting": 17
+           },
+           "position": "Yes"
+         },
+                  {
+           "member_id": "K000388",
+            
+             
+           "session": "1",
+           "roll_call": "113",
+           "vote_uri": "https://api.propublica.org/congress/v1/117/house/sessions/1/votes/113.json",
+           "bill": {
+             "bill_id": "hr1899-117",
+             "number": "H R 1899",
+             "sponsor_id": "G000568",
+             "bill_uri": "https://api.propublica.org/congress/v1/117/bills/hr1899.json",
+             "title": "To amend the Controlled Substances Act to provide for the modification, transfer, and termination of a registration to manufacture, distribute, or dispense controlled substances or list I chemicals, and for other purposes.",
+             "latest_action": "Received in the Senate and Read twice and referred to the Committee on the Judiciary."
+           },
+           "amendment": {
+           },
+                     "description": "Ensuring Compliance Against Drug Diversion Act",
+           "question": "On Motion to Suspend the Rules and Pass",
+           "result": "Passed",
+           "date": "2021-04-15",
+           "time": "20:00:00",
+           "total":              {
+               "yes": 412,
+               "no": 5,
+               "present": 0,
+               "not_voting": 13
+           },
+           "position": "Yes"
+         },
+                  {
+           "member_id": "K000388",
+            
+             
+           "session": "1",
+           "roll_call": "112",
+           "vote_uri": "https://api.propublica.org/congress/v1/117/house/sessions/1/votes/112.json",
+           "bill": {
+             "bill_id": "hr1002-117",
+             "number": "H R 1002",
+             "sponsor_id": "L000566",
+             "bill_uri": "https://api.propublica.org/congress/v1/117/bills/hr1002.json",
+             "title": "To amend the Controlled Substances Act to authorize the debarment of certain registrants, and for other purposes.",
+             "latest_action": "Received in the Senate and Read twice and referred to the Committee on the Judiciary."
+           },
+           "amendment": {
+           },
+                     "description": "Debarment Enforcement of Bad Actor Registrants Act",
+           "question": "On Motion to Suspend the Rules and Pass, as Amended",
+           "result": "Passed",
+           "date": "2021-04-15",
+           "time": "19:27:00",
+           "total":              {
+               "yes": 411,
+               "no": 5,
+               "present": 0,
+               "not_voting": 14
+           },
+           "position": "Yes"
+         },
+                  {
+           "member_id": "K000388",
+            
+             
+           "session": "1",
+           "roll_call": "111",
+           "vote_uri": "https://api.propublica.org/congress/v1/117/house/sessions/1/votes/111.json",
+           "bill": {
+             "bill_id": "hr1762-117",
+             "number": "H R 1762",
+             "sponsor_id": "M001190",
+             "bill_uri": "https://api.propublica.org/congress/v1/117/bills/hr1762.json",
+             "title": "To direct the Federal Trade Commission to submit to Congress a report on unfair or deceptive acts or practices targeted at Indian Tribes or members of Indian Tribes, and for other purposes.",
+             "latest_action": "Received in the Senate and Read twice and referred to the Committee on Commerce, Science, and Transportation."
+           },
+           "amendment": {
+           },
+                     "description": "Protecting Indian Tribes from Scams Act",
+           "question": "On Motion to Suspend the Rules and Pass",
+           "result": "Passed",
+           "date": "2021-04-15",
+           "time": "18:55:00",
+           "total":              {
+               "yes": 408,
+               "no": 10,
+               "present": 0,
+               "not_voting": 12
+           },
+           "position": "Yes"
+         },
+                  {
+           "member_id": "K000388",
+            
+             
+           "session": "1",
+           "roll_call": "110",
+           "vote_uri": "https://api.propublica.org/congress/v1/117/house/sessions/1/votes/110.json",
+           "bill": {
+             "bill_id": "hr446-117",
+             "number": "H R 446",
+             "sponsor_id": "K000385",
+             "bill_uri": "https://api.propublica.org/congress/v1/117/bills/hr446.json",
+             "title": "To require the Federal Trade Commission to submit a report to Congress on scams targeting seniors, and for other purposes.",
+             "latest_action": "Received in the Senate and Read twice and referred to the Committee on Commerce, Science, and Transportation."
+           },
+           "amendment": {
+           },
+                     "description": "Protecting Seniors from Emergency Scams Act",
+           "question": "On Motion to Suspend the Rules and Pass",
+           "result": "Passed",
+           "date": "2021-04-15",
+           "time": "18:21:00",
+           "total":              {
+               "yes": 413,
+               "no": 8,
+               "present": 0,
+               "not_voting": 9
+           },
+           "position": "Yes"
+         },
+                  {
+           "member_id": "K000388",
+            
+             
+           "session": "1",
+           "roll_call": "109",
+           "vote_uri": "https://api.propublica.org/congress/v1/117/house/sessions/1/votes/109.json",
+           "bill": {
+             "bill_id": "hr941-117",
+             "number": "H R 941",
+             "sponsor_id": "M001163",
+             "bill_uri": "https://api.propublica.org/congress/v1/117/bills/hr941.json",
+             "title": "To reauthorize the Stem Cell Therapeutic and Research Act of 2005, and for other purposes.",
+             "latest_action": "Received in the Senate and Read twice and referred to the Committee on Health, Education, Labor, and Pensions."
+           },
+           "amendment": {
+           },
+                     "description": "TRANSPLANT Act",
+           "question": "On Motion to Suspend the Rules and Pass",
+           "result": "Passed",
+           "date": "2021-04-15",
+           "time": "17:49:00",
+           "total":              {
+               "yes": 415,
+               "no": 2,
+               "present": 0,
+               "not_voting": 13
+           },
+           "position": "Yes"
+         },
+                  {
+           "member_id": "K000388",
+            
+             
+           "session": "1",
+           "roll_call": "108",
+           "vote_uri": "https://api.propublica.org/congress/v1/117/house/sessions/1/votes/108.json",
+           "bill": {
+             "bill_id": "hr7-117",
+             "number": "H R 7",
+             "sponsor_id": "D000216",
+             "bill_uri": "https://api.propublica.org/congress/v1/117/bills/hr7.json",
+             "title": "To amend the Fair Labor Standards Act of 1938 to provide more effective remedies to victims of discrimination in the payment of wages on the basis of sex, and for other purposes.",
+             "latest_action": "Received in the Senate. Read the first time. Placed on Senate Legislative Calendar under Read the First Time."
+           },
+           "amendment": {
+           },
+                     "description": "Paycheck Fairness Act",
+           "question": "On Passage",
+           "result": "Passed",
+           "date": "2021-04-15",
+           "time": "17:15:00",
+           "total":              {
+               "yes": 217,
+               "no": 210,
+               "present": 0,
+               "not_voting": 3
+           },
+           "position": "No"
+         },
+                  {
+           "member_id": "K000388",
+            
+             
+           "session": "1",
+           "roll_call": "107",
+           "vote_uri": "https://api.propublica.org/congress/v1/117/house/sessions/1/votes/107.json",
+           "bill": {
+             "bill_id": "hr7-117",
+             "number": "H R 7",
+             "sponsor_id": "D000216",
+             "bill_uri": "https://api.propublica.org/congress/v1/117/bills/hr7.json",
+             "title": "To amend the Fair Labor Standards Act of 1938 to provide more effective remedies to victims of discrimination in the payment of wages on the basis of sex, and for other purposes.",
+             "latest_action": "Received in the Senate. Read the first time. Placed on Senate Legislative Calendar under Read the First Time."
+           },
+           "amendment": {
+           },
+                     "description": "Miller-Meeks of Iowa Part B Amendment No. 4",
+           "question": "On Agreeing to the Amendment",
+           "result": "Failed",
+           "date": "2021-04-15",
+           "time": "16:42:00",
+           "total":              {
+               "yes": 183,
+               "no": 244,
+               "present": 0,
+               "not_voting": 3
+           },
+           "position": "Yes"
+         },
+                  {
+           "member_id": "K000388",
+            
+             
+           "session": "1",
+           "roll_call": "106",
+           "vote_uri": "https://api.propublica.org/congress/v1/117/house/sessions/1/votes/106.json",
+           "bill": {
+             "bill_id": "hr7-117",
+             "number": "H R 7",
+             "sponsor_id": "D000216",
+             "bill_uri": "https://api.propublica.org/congress/v1/117/bills/hr7.json",
+             "title": "To amend the Fair Labor Standards Act of 1938 to provide more effective remedies to victims of discrimination in the payment of wages on the basis of sex, and for other purposes.",
+             "latest_action": "Received in the Senate. Read the first time. Placed on Senate Legislative Calendar under Read the First Time."
+           },
+           "amendment": {
+           },
+                     "description": "Scott of Virginia Part B Amendment En Bloc No. 1",
+           "question": "On Agreeing to the Amendment",
+           "result": "Agreed to",
+           "date": "2021-04-15",
+           "time": "16:07:00",
+           "total":              {
+               "yes": 216,
+               "no": 207,
+               "present": 0,
+               "not_voting": 7
+           },
+           "position": "No"
+         },
+                  {
+           "member_id": "K000388",
+            
+             
+           "session": "1",
+           "roll_call": "105",
+           "vote_uri": "https://api.propublica.org/congress/v1/117/house/sessions/1/votes/105.json",
+           "bill": {
+             "bill_id": "hr1460-117",
+             "number": "H R 1460",
+             "sponsor_id": "K000382",
+             "bill_uri": "https://api.propublica.org/congress/v1/117/bills/hr1460.json",
+             "title": "To encourage States to require the installation of residential carbon monoxide detectors in homes, and for other purposes.",
+             "latest_action": "Received in the Senate and Read twice and referred to the Committee on Commerce, Science, and Transportation."
+           },
+           "amendment": {
+           },
+                     "description": "Nicholas and Zachary Burt Memorial Carbon Monoxide Poisoning Prevention Act",
+           "question": "On Motion to Suspend the Rules and Pass",
+           "result": "Passed",
+           "date": "2021-04-15",
+           "time": "15:35:00",
+           "total":              {
+               "yes": 362,
+               "no": 49,
+               "present": 0,
+               "not_voting": 19
+           },
+           "position": "Yes"
+         },
+                  {
+           "member_id": "K000388",
+            
+             
+           "session": "1",
+           "roll_call": "104",
+           "vote_uri": "https://api.propublica.org/congress/v1/117/house/sessions/1/votes/104.json",
+           "bill": {
+             "bill_id": "hr1215-117",
+             "number": "H R 1215",
+             "sponsor_id": "B001303",
+             "bill_uri": "https://api.propublica.org/congress/v1/117/bills/hr1215.json",
+             "title": "To establish an office within the Federal Trade Commission and an outside advisory group to prevent fraud targeting seniors and to direct the Commission to include additional information in an annual report to Congress on fraud targeting seniors, and for other purposes.",
+             "latest_action": "Received in the Senate."
+           },
+           "amendment": {
+           },
+                     "description": "Fraud and Scam Reduction Act",
+           "question": "On Motion to Suspend the Rules and Pass, as Amended",
+           "result": "Passed",
+           "date": "2021-04-15",
+           "time": "15:03:00",
+           "total":              {
+               "yes": 396,
+               "no": 13,
+               "present": 0,
+               "not_voting": 21
+           },
+           "position": "Yes"
+         },
+                  {
+           "member_id": "K000388",
+            
+             
+           "session": "1",
+           "roll_call": "103",
+           "vote_uri": "https://api.propublica.org/congress/v1/117/house/sessions/1/votes/103.json",
+           "bill": {
+             "bill_id": "hres303-117",
+             "number": "H RES 303",
+             "sponsor_id": "D000623",
+             "bill_uri": "https://api.propublica.org/congress/v1/117/bills/hres303.json",
+             "title": "Providing for consideration of the bill (H.R. 7) to amend the Fair Labor Standards Act of 1938 to provide more effective remedies to victims of discrimination in the payment of wages on the basis of sex, and for other purposes, and providing for consideration of the bill (H.R. 1195) to direct the Secretary of Labor to issue an occupational safety and health standard that requires covered employers within the health care and social service industries to develop and implement a comprehensive workplace violence prevention plan, and for other purposes.",
+             "latest_action": "Motion to reconsider laid on the table Agreed to without objection."
+           },
+           "amendment": {
+           },
+                     "description": "Providing for consideration of H.R. 7, the Paycheck Fairness Act and H.R. 1195, the Workplace Violence Prevention for Health Care and Social Service Workers Act",
+           "question": "On Agreeing to the Resolution",
+           "result": "Passed",
+           "date": "2021-04-14",
+           "time": "18:50:00",
+           "total":              {
+               "yes": 217,
+               "no": 207,
+               "present": 0,
+               "not_voting": 6
+           },
+           "position": "No"
+         },
+                  {
+           "member_id": "K000388",
+            
+             
+           "session": "1",
+           "roll_call": "102",
+           "vote_uri": "https://api.propublica.org/congress/v1/117/house/sessions/1/votes/102.json",
+           "bill": {
+             "bill_id": "hres303-117",
+             "number": "H RES 303",
+             "sponsor_id": "D000623",
+             "bill_uri": "https://api.propublica.org/congress/v1/117/bills/hres303.json",
+             "title": "Providing for consideration of the bill (H.R. 7) to amend the Fair Labor Standards Act of 1938 to provide more effective remedies to victims of discrimination in the payment of wages on the basis of sex, and for other purposes, and providing for consideration of the bill (H.R. 1195) to direct the Secretary of Labor to issue an occupational safety and health standard that requires covered employers within the health care and social service industries to develop and implement a comprehensive workplace violence prevention plan, and for other purposes.",
+             "latest_action": "Motion to reconsider laid on the table Agreed to without objection."
+           },
+           "amendment": {
+           },
+                     "description": "Providing for consideration of H.R. 7, the Paycheck Fairness Act and H.R. 1195, the Workplace Violence Prevention for Health Care and Social Service Workers Act",
+           "question": "On Ordering the Previous Question",
+           "result": "Passed",
+           "date": "2021-04-14",
+           "time": "18:19:00",
+           "total":              {
+               "yes": 217,
+               "no": 208,
+               "present": 0,
+               "not_voting": 5
+           },
+           "position": "No"
+         }
+       ]
+    }
+  ]
+}

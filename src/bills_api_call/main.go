@@ -75,6 +75,9 @@ func main() {
 		fmt.Println(eachBill.Bill.BillID + ": " /*+ eachBill.Bill.Title*/)
 	}
 	//fmt.Println("")
+	fmt.Println("")
+	fmt.Println("Full Member API Json Response")
+	fmt.Println(string(responseData))
 
 	fmt.Println("")
 	fmt.Println("Now collecting specific data on each bill")
@@ -117,6 +120,10 @@ func main() {
 			fmt.Println("~")
 			fmt.Println(billsAPIResponse.Results[0].PrimarySubject)
 			fmt.Println()
+
+			fmt.Println("Full Bill API Json Response")
+			fmt.Println(string(responseData))
+			fmt.Println("")
 		}
 	}
 }
