@@ -8,6 +8,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"strings"
 	//_ "github.com/go-sql-driver/mysql"
 )
 
@@ -71,85 +72,53 @@ func main() {
 	fmt.Println()
 
 	for _, eachBill := range membersAPIResponse.Results[0].Votes {
-		fmt.Println(eachBill.Bill.BillID + ": " + eachBill.Bill.Title)
+		fmt.Println(eachBill.Bill.BillID + ": " /*+ eachBill.Bill.Title*/)
 	}
 	//fmt.Println("")
 
-	/*
-		//*********Managing the DB*******
-		db, err := useDB.Connect()
-		if err != nil {
-			log.Printf("Error %s when getting db connection", err)
-			return
-		}
-		defer db.Close()
-		log.Printf("Successfully connected to database")
-		err = useDB.CreateTopTenTable(db)
-		if err != nil {
-			log.Printf("Create top ten table failed with error %s", err)
-			return
-		}
-	*/
+	fmt.Println("")
+	fmt.Println("Now collecting specific data on each bill")
 
-	/*
-		//Managing the data
-		crp_ids := readCSV()
-		for count, id := range crp_ids {
-			//Skipped Count = 0 for now
-			if 7 < count && count < 50 {
-				log.Printf("Fetching and inserting crp_id " + id[0])
+	debug_count := 1
+	for index, eachBill := range membersAPIResponse.Results[0].Votes {
+		if index <= debug_count {
+			fmt.Println("")
+			fmt.Println("fetching details for: " + eachBill.Bill.BillID)
 
-				client := &http.Client{}
+			bill_slug := strings.TrimSuffix(eachBill.Bill.BillID, "-117")
+			client := &http.Client{}
 
-				request_url := "http://www.opensecrets.org/api/?method=candIndustry&cid=" + id[0] + "&cycle=2020&apikey=c3fd74a75e5cb8756e262e8d2f0480b3&output=json"
-				req, err := http.NewRequest("GET", request_url, nil)
-				if err != nil {
-					log.Fatalln(err)
-				}
-
-				req.Header.Set("User-Agent", "Golang_Funds_To_Votes_Bot")
-
-				response, err := client.Do(req)
-				if err != nil {
-					log.Fatalln(err)
-				}
-
-				responseData, err := ioutil.ReadAll(response.Body)
-				if err != nil {
-					log.Printf("Error in reading response")
-					log.Fatal(err)
-				}
-
-				//Create an empty instance of a Congressperson to recieve JSON
-				congressperson := &useDB.Congressperson{}
-				json.Unmarshal(responseData, congressperson)
-
-				fmt.Println("~")
-				fmt.Println(congressperson.Response.Industries.Attributes.CandName)
-				fmt.Println()
-
-				fmt.Println("Raw Json")
-				// Convert response body to string
-				bodyString := string(responseData)
-				fmt.Println(bodyString)
-				fmt.Println("")
-
-				for _, industry := range congressperson.Response.Industries.Industry {
-					fmt.Print(industry.Attributes.IndustryName + ", ")
-				}
-				fmt.Println("")
-
-				//Inserting into the db
-				err = useDB.Insert(db, *congressperson)
-				if err != nil {
-					log.Printf("Insert member"+congressperson.Response.Industries.Attributes.CandName+" failed with error %s", err)
-					return
-				}
-
+			request_url := "https://api.propublica.org/congress/v1/117/bills/" + bill_slug + ".json"
+			req, err := http.NewRequest("GET", request_url, nil)
+			if err != nil {
+				log.Fatalln(err)
 			}
-		}
 
-	*/
+			req.Header.Set("User-Agent", "Golang_Funds_To_Votes_Bot")
+			req.Header.Set("X-API-Key", "bUEZbt82MwpoNooSEbGjITvWKC703nY2isRQVa5Y")
+
+			response, err := client.Do(req)
+			if err != nil {
+				log.Fatalln(err)
+			}
+
+			responseData, err := ioutil.ReadAll(response.Body)
+			if err != nil {
+				log.Printf("Error in reading response")
+				log.Fatal(err)
+			}
+
+			log.Printf("Bill data successfully fetched")
+
+			//Create an empty instance of a BillsAPIResponse to recieve JSON
+			billsAPIResponse := &BillsAPIResponse{}
+			json.Unmarshal(responseData, billsAPIResponse)
+
+			fmt.Println("~")
+			fmt.Println(billsAPIResponse.Results[0].PrimarySubject)
+			fmt.Println()
+		}
+	}
 }
 
 type MembersAPIResponse struct {
@@ -190,6 +159,68 @@ type MembersAPIResponse struct {
 			//Bill struct {
 			//} `json:"bill,omitempty"`
 		} `json:"votes"`
+	} `json:"results"`
+}
+
+type BillsAPIResponse struct {
+	Status    string `json:"status"`
+	Copyright string `json:"copyright"`
+	Results   []struct {
+		BillID            string      `json:"bill_id"`
+		BillSlug          string      `json:"bill_slug"`
+		Congress          string      `json:"congress"`
+		Bill              string      `json:"bill"`
+		BillType          string      `json:"bill_type"`
+		Number            string      `json:"number"`
+		BillURI           string      `json:"bill_uri"`
+		Title             string      `json:"title"`
+		ShortTitle        string      `json:"short_title"`
+		SponsorTitle      string      `json:"sponsor_title"`
+		Sponsor           string      `json:"sponsor"`
+		SponsorID         string      `json:"sponsor_id"`
+		SponsorURI        string      `json:"sponsor_uri"`
+		SponsorParty      string      `json:"sponsor_party"`
+		SponsorState      string      `json:"sponsor_state"`
+		GpoPdfURI         interface{} `json:"gpo_pdf_uri"`
+		CongressdotgovURL string      `json:"congressdotgov_url"`
+		GovtrackURL       string      `json:"govtrack_url"`
+		IntroducedDate    string      `json:"introduced_date"`
+		Active            bool        `json:"active"`
+		LastVote          interface{} `json:"last_vote"`
+		HousePassage      string      `json:"house_passage"`
+		SenatePassage     interface{} `json:"senate_passage"`
+		Enacted           interface{} `json:"enacted"`
+		Vetoed            interface{} `json:"vetoed"`
+		Cosponsors        int         `json:"cosponsors"`
+		CosponsorsByParty struct {
+			R int `json:"R"`
+			D int `json:"D"`
+		} `json:"cosponsors_by_party"`
+		WithdrawnCosponsors   int           `json:"withdrawn_cosponsors"`
+		PrimarySubject        string        `json:"primary_subject"`
+		Committees            string        `json:"committees"`
+		CommitteeCodes        []string      `json:"committee_codes"`
+		SubcommitteeCodes     []interface{} `json:"subcommittee_codes"`
+		LatestMajorActionDate string        `json:"latest_major_action_date"`
+		LatestMajorAction     string        `json:"latest_major_action"`
+		HousePassageVote      string        `json:"house_passage_vote"`
+		SenatePassageVote     interface{}   `json:"senate_passage_vote"`
+		Summary               string        `json:"summary"`
+		SummaryShort          string        `json:"summary_short"`
+		Versions              []struct {
+			Status            string `json:"status"`
+			Title             string `json:"title"`
+			URL               string `json:"url"`
+			CongressdotgovURL string `json:"congressdotgov_url"`
+		} `json:"versions"`
+		Actions []struct {
+			ID          int    `json:"id"`
+			Chamber     string `json:"chamber"`
+			ActionType  string `json:"action_type"`
+			Datetime    string `json:"datetime"`
+			Description string `json:"description"`
+		} `json:"actions"`
+		Votes []interface{} `json:"votes"`
 	} `json:"results"`
 }
 
