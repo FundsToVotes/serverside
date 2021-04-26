@@ -48,6 +48,11 @@
 * Cleanup and Optimization
     + Opensecrets top 10: 
         - Fetch CRP ID programatically rather than manual .csv file creation
+* Bills endpoint things for later: 
+    + Filter bills from the members endpoint by the following catgories only
+        - "On Motion to Suspend the Rules and Pass", "On Motion to Suspend the Rules and Agree", "On Motion to Suspend the Rules and Pass, as Amended", and "On Agreeing to the Resolution", "On Passage"
+    + Add paging function to get more bills
+    + futureproofing - ability to update the congress, potentially automatically
 
 ### Bills endpoint rambling and thoughts
 Okay, so
@@ -59,6 +64,46 @@ I need to have several things
 * I think I'm slightly confused about what data comes from where - I want bill information, I want opensecrets information on the industry related to this, i want bills voted on by politician
 * Goal: correlate donor industries (opensecrets) with bill categories (propublica), and use this to make a visualization
 * Putting this together will require looking at a list of donor industries and a list of bill categories
+
+### Correlation 
+Lets correlate "Finance and Financial Sector" 
+there's more opensecrets categories than legislative areas
+Plan: prefix of the sector for each thing
+Taxation -> ???
+Health -> H, Health
+Government Operations and Politics -> ????
+Armed Forces and National Security -> D, Defense
+Congress -> ??
+International Affairs -> Q, Ideological/Single-Issue
+Foreign Trade and International Finance -> N, Misc Buisness
+Public Lands and Natural Resources -> E, Energy & Natural Resources
+Crime and Law Enforcement -> ? 
+Transportation and Public Works -> M, Transportation
+Social Welfare -> ? 
+Education -> W, Other
+Energy ->  E, Energy & Natural Resources
+Agriculture and Food -> A, Agribuisness 
+Labor and Employment -> P, Labor
+Finance and Financial Sector -> F, Finance, Insurance & Real Estate
+Enviromental Protection ->  Q, Ideological/Single-Issue
+Economics and Public Finance -> F, Finance, Insurance & Real Estate
+Commerce -> N, Misc Buisness
+Science, Technology, Communications -> B, Communications/Electronics
+Immigration -> Q, Ideological/Single-Issue
+Housing and Community Devolopment -> 
+Law -> K, Lawyers & Lobbiests
+Water Resources Development ->  E, Energy & Natural Resources
+Civil Rights and Liberties, Minority Issues -> Q, Ideological/Single-Issue
+Native Americans -> Q, Ideological/Single-Issue
+Emergency Management -> 
+Families -> W, Other
+Animals -> A, Agribuisness
+Arts, Culture, Religion -> W, Other
+Sports and Recreation -> N, Misc Buisness
+Social Sciences and History ->  W, Other
+
+missing: construction sector
+
 
 ## Gameplan
 * The opensecrets only one for the top 10 sector information seems easiest

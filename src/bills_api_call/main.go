@@ -77,12 +77,12 @@ func main() {
 	//fmt.Println("")
 	fmt.Println("")
 	fmt.Println("Full Member API Json Response")
-	fmt.Println(string(responseData))
+	//fmt.Println(string(responseData))
 
 	fmt.Println("")
 	fmt.Println("Now collecting specific data on each bill")
 
-	debug_count := 1
+	debug_count := 100
 	for index, eachBill := range membersAPIResponse.Results[0].Votes {
 		if index <= debug_count {
 			fmt.Println("")
@@ -117,12 +117,15 @@ func main() {
 			billsAPIResponse := &BillsAPIResponse{}
 			json.Unmarshal(responseData, billsAPIResponse)
 
-			fmt.Println("~")
-			fmt.Println(billsAPIResponse.Results[0].PrimarySubject)
-			fmt.Println()
-
-			fmt.Println("Full Bill API Json Response")
-			fmt.Println(string(responseData))
+			if len(billsAPIResponse.Results) > 0 {
+				fmt.Println("Primary subject: " + billsAPIResponse.Results[0].PrimarySubject)
+				fmt.Println("Short title: " + billsAPIResponse.Results[0].ShortTitle)
+				fmt.Println()
+			} else {
+				fmt.Println("No data returned for " + bill_slug)
+			}
+			//fmt.Println("Full Bill API Json Response")
+			//fmt.Println(string(responseData))
 			fmt.Println("")
 		}
 	}
