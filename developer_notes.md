@@ -1,9 +1,8 @@
 # Developer notes
 ### Document purpose - keeping track of to-do lists, shortcuts, and other things that will be helpful during the development process 
+#### Tasks for the future (ie to do lists) now live in the trello, and will not be added here
 
 ## To Do List
-* Serverside stuff - not my problem
-* Basic setup - done
 * Visualizations I'm contributing backend to
     + Votes on Bills by Representative
         > Details: representative votes on bill and category of bill is different. This would be two api calls, so, it should be in the backend. Our goal is a list of bills, with category and how they voted
@@ -45,14 +44,7 @@
         > Propublica
 
         > We specifically want the vote for the final approval of the bill, not the vote for adjourning for the day or other garbage
-* Cleanup and Optimization
-    + Opensecrets top 10: 
-        - Fetch CRP ID programatically rather than manual .csv file creation
-* Bills endpoint things for later: 
-    + Filter bills from the members endpoint by the following catgories only
-        - "On Motion to Suspend the Rules and Pass", "On Motion to Suspend the Rules and Agree", "On Motion to Suspend the Rules and Pass, as Amended", and "On Agreeing to the Resolution", "On Passage"
-    + Add paging function to get more bills
-    + futureproofing - ability to update the congress, potentially automatically
+
 
 ### Bills endpoint rambling and thoughts
 Okay, so

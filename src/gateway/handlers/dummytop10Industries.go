@@ -50,8 +50,8 @@ func DummyTopTenHandler(w http.ResponseWriter, r *http.Request) {
 				"cand_name": "Alma Adams",
 				"cid": "N00035451",
 				"cycle": "2020",
-				"last_updated": "03\\/22\\/2021",
-				"last_updated_FundsToVotesdb": "04\\/09\\/2021"
+				"last_updated": "03/22/2021",
+				"last_updated_FundsToVotesdb": "04/09/2021"
 			  },
 			  "industry": [
 				{
@@ -120,7 +120,7 @@ func DummyTopTenHandler(w http.ResponseWriter, r *http.Request) {
 				{
 				  "@attributes": {
 					"industry_code": "F06",
-					"industry_name": "Finance\\/Credit Companies",
+					"industry_name": "Finance/Credit Companies",
 					"indivs": "0",
 					"pacs": "27500",
 					"total": "27500"
@@ -129,7 +129,7 @@ func DummyTopTenHandler(w http.ResponseWriter, r *http.Request) {
 				{
 				  "@attributes": {
 					"industry_code": "K01",
-					"industry_name": "Lawyers\\/Law Firms",
+					"industry_name": "Lawyers/Law Firms",
 					"indivs": "10330",
 					"pacs": "15000",
 					"total": "25330"
