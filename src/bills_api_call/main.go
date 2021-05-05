@@ -39,6 +39,7 @@ I need to have several things
 func main() {
 	log.Printf("The bills visualization!")
 	member_id := "K000388"
+
 	client := &http.Client{}
 
 	request_url := "https://api.propublica.org/congress/v1/members/" + member_id + "/votes.json"
@@ -71,18 +72,24 @@ func main() {
 	fmt.Println(membersAPIResponse.Status)
 	fmt.Println()
 
-	for _, eachBill := range membersAPIResponse.Results[0].Votes {
+	for index, eachBill := range membersAPIResponse.Results[0].Votes {
 		fmt.Println(eachBill.Bill.BillID + ": " /*+ eachBill.Bill.Title*/)
+
+		if index < 20 {
+			fmt.Println(eachBill.Bill.BillID, ", number: ", eachBill.Bill.Number)
+		}
+
 	}
 	//fmt.Println("")
 	fmt.Println("")
-	fmt.Println("Full Member API Json Response")
+	//fmt.Println("Full Member API Json Response")
+
 	//fmt.Println(string(responseData))
 
 	fmt.Println("")
 	fmt.Println("Now collecting specific data on each bill")
 
-	debug_count := 100
+	debug_count := -1
 	for index, eachBill := range membersAPIResponse.Results[0].Votes {
 		if index <= debug_count {
 			fmt.Println("")

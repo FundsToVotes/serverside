@@ -4,48 +4,56 @@ package handlers
 type BillsToServe struct {
 	Status string `json:"status"`
 	//Results []struct {
-	MemberID   string `json:"member_id"`
-	NumResults string `json:"num_results"`
-	Offset     string `json:"offset"`
-	Votes      []struct {
-		Session  string `json:"session"`
-		RollCall string `json:"roll_call"`
-		VoteURI  string `json:"vote_uri"`
-		Bill     struct {
-			BillID                  string        `json:"bill_id"`
-			Number                  string        `json:"number"`
-			SponsorID               string        `json:"sponsor_id"`
-			BillURI                 string        `json:"bill_uri"`
-			Title                   string        `json:"title"`
-			LatestAction            string        `json:"latest_action"`
-			ShortTitle              string        `json:"short_title"`
-			PrimarySubject          string        `json:"primary_subject"`
-			OpensecretsSectorPrefix string        `json:"Opensecrets_Sector_Prefix"`
-			OpensecretsSector       string        `json:"Opensecrets_Sector"`
-			OpensecretsSectorLong   string        `json:"Opensecrets_Sector_Long"`
-			Committees              string        `json:"committees"`
-			CommitteeCodes          []string      `json:"committee_codes"`
-			SubcommitteeCodes       []interface{} `json:"subcommittee_codes"`
-			Summary                 string        `json:"summary"`
-			SummaryShort            string        `json:"summary_short"`
-		} `json:"bill"`
-		Amendment struct {
-		} `json:"amendment"`
-		Description string `json:"description"`
-		Question    string `json:"question"`
-		Result      string `json:"result"`
-		Date        string `json:"date"`
-		Time        string `json:"time"`
-		Total       struct {
-			Yes       int `json:"yes"`
-			No        int `json:"no"`
-			Present   int `json:"present"`
-			NotVoting int `json:"not_voting"`
-		} `json:"total"`
-		Position string `json:"position"`
-		MemberID string `json:"member_id,omitempty"`
-	} `json:"votes"`
+	MemberID   string         `json:"member_id"`
+	NumResults string         `json:"num_results"`
+	TotalVotes string         `json:"total_votes"`
+	Offset     string         `json:"offset"`
+	Votes      []VotesToServe `json:"votes"`
 	//} `json:"results"`
+}
+
+//Votes struct to be included inside BillsToServe
+type VotesToServe struct {
+	Session  string `json:"session"`
+	RollCall string `json:"roll_call"`
+	VoteURI  string `json:"vote_uri"`
+
+	Bill EachBillToServe `json:"bill"`
+	//Amendment struct {
+	//} `json:"amendment"`
+
+	Description string `json:"description"`
+	Question    string `json:"question"`
+	Result      string `json:"result"`
+	Date        string `json:"date"`
+	Time        string `json:"time"`
+	Total       struct {
+		Yes       int `json:"yes"`
+		No        int `json:"no"`
+		Present   int `json:"present"`
+		NotVoting int `json:"not_voting"`
+	} `json:"total"`
+	Position string `json:"position"`
+}
+
+// The data for each individual bill being served
+type EachBillToServe struct {
+	BillID                  string        `json:"bill_id"`
+	Number                  string        `json:"number"`
+	SponsorID               string        `json:"sponsor_id"`
+	BillURI                 string        `json:"bill_uri"`
+	Title                   string        `json:"title"`
+	LatestAction            string        `json:"latest_action"`
+	ShortTitle              string        `json:"short_title"`
+	PrimarySubject          string        `json:"primary_subject"`
+	OpensecretsSectorPrefix string        `json:"Opensecrets_Sector_Prefix"`
+	OpensecretsSector       string        `json:"Opensecrets_Sector"`
+	OpensecretsSectorLong   string        `json:"Opensecrets_Sector_Long"`
+	Committees              string        `json:"committees"`
+	CommitteeCodes          []string      `json:"committee_codes"`
+	SubcommitteeCodes       []interface{} `json:"subcommittee_codes"`
+	Summary                 string        `json:"summary"`
+	SummaryShort            string        `json:"summary_short"`
 }
 
 //The data fetched from the Propublica members endpoint

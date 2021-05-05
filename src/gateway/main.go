@@ -36,6 +36,7 @@ func main() {
 	mux.HandleFunc("/hello", handlers.HelloHandler)
 	mux.HandleFunc("/topten", handlers.DummyTopTenHandler)
 	mux.HandleFunc("/bills", handlers.DummyBillsHandler)
+	mux.HandleFunc("/billstest", handlers.BillsHandler)
 
 	//Add the CORS middleware
 	corsWrappedMux := handlers.NewCORSMiddleware(mux)
