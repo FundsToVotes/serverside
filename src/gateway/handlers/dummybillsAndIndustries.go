@@ -123,8 +123,8 @@ func DummyBillsHandler(w http.ResponseWriter, r *http.Request) {
 								"HSBA"
 							],
 							"subcommittee_codes": [],
-							"summary": "Dummy long summary with fake data ",
-							"summary_short": "Dummy short summary with fake data"
+							"summary": "Workplace Violence Prevention for Health Care and Social Service Workers Act This bill requires the Department of Labor to address workplace violence in health care, social service, and other sectors. Specifically, Labor must issue an interim occupational safety and health standard that requires certain employers to take actions to protect workers and other personnel from workplace violence. The standard applies to employers in the health care sector, in the social service sector, and in sectors that conduct activities similar to those in the health care and social service sectors. In addition, Labor must promulgate a final standard within a specified time line ",
+							"summary_short": "Workplace Violence Prevention for Health Care and Social Service Workers Act This bill requires the Department of Labor to address workplace violence in health care, social service, and other sectors. Specifically, Labor must issue an interim occupational safety and health standard that requires certain employers to take actions to protect workers and other personnel from workplace violence. The standard applies to employers in the health care sector, in the social service sector, and in sect..."
 						},
 						"amendment": {},
 						"description": "Workplace Violence Prevention for Health Care and Social Service Workers Act",
@@ -162,8 +162,8 @@ func DummyBillsHandler(w http.ResponseWriter, r *http.Request) {
 								"HSBA"
 							],
 							"subcommittee_codes": [],
-							"summary": "Dummy long summary with fake data ",
-							"summary_short": "Dummy short summary with fake data"
+							"summary": "504 Modernization and Small Manufacturer Enhancement Act of 2021 This bill modifies the Small Business Administration (SBA) 504 Loan Program, which provides a small business with SBA financing—through a certified development company (CDC) intermediary—for expansion or modernization. Specifically, the bill adds policy goals, at least one of which a CDC must demonstrate to be eligible for assistance. These include (1) enhancing the ability of a small business to reduce costs by using energy efficient products and generating renewable energy, and (2) aiding the revitalization of any area for which a disaster has been declared or determined. The bill also authorizes a CDC to take specified actions to facilitate the closing of a 504 loan, such as correcting borrower or lender information on loan documents or reallocating up to 10% of the cost of a project. For small manufacturers, the bill (1) increases the maximum loan amount from $5.5 million to $6.5 million, (2) reduces the amount that they must contribute to project costs, (3) increases job retention requirements, and (4) revises collateral requirements and debt refinancing considerations. Further, each SBA district office must partner with a resource partner to provide certain training for small manufacturers.  ",
+							"summary_short": "504 Modernization and Small Manufacturer Enhancement Act of 2021 This bill modifies the Small Business Administration (SBA) 504 Loan Program, which provides a small business with SBA financing—through a certified development company (CDC) intermediary—for expansion or modernization. Specifically, the bill adds policy goals, at least one of which a CDC must demonstrate to be eligible for assistance. These include (1) enhancing the ability of a small business to reduce costs by using energy eff..."
 						},
 						"amendment": {},
 						"description": "504 Modernization and Small Manufacturer Enhancement Act",
@@ -200,8 +200,8 @@ func DummyBillsHandler(w http.ResponseWriter, r *http.Request) {
 								"HSBA"
 							],
 							"subcommittee_codes": [],
-							"summary": "Dummy long summary with fake data ",
-							"summary_short": "Dummy short summary with fake data"
+							"summary": "Microloan Transparency and Accountability Act of 2021 This bill modifies reporting requirements related to the Small Business Administration's (SBA) disbursement of certain financial assistance. Specifically, the bill requires the SBA to report certain metrics related to the disbursement of microloans to small businesses, including (1) the number, amount, and percentage of such loans that went into default in the previous year; (2) the extent to which microloans are provided to small businesses in rural areas; and (3) the average size, rate of interest, and amount of fees charged for each microloan.",
+							"summary_short": "Microloan Transparency and Accountability Act of 2021 This bill modifies reporting requirements related to the Small Business Administration's (SBA) disbursement of certain financial assistance. Specifically, the bill requires the SBA to report certain metrics related to the disbursement of microloans to small businesses, including (1) the number, amount, and percentage of such loans that went into default in the previous year; (2) the extent to which microloans are provided to small business..."
 						},
 						"amendment": {},
 						"description": "Microloan Transparency and Accountability Act",

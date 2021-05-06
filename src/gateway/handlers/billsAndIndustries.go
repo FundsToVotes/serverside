@@ -16,21 +16,19 @@ func BillsHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 
 	//Get the `url` query string parameter value from the request.
-	keys, ok := r.URL.Query()["name"]
+	keys, ok := r.URL.Query()["member_id"]
 
 	//If not supplied, respond with an http.StatusBadRequest error.
 	if !ok || len(keys[0]) < 1 || len(keys) < 1 {
 		w.WriteHeader(http.StatusBadRequest)
-		http.Error(w, "StatusBadRequestError: Please provide a representative name", 400)
+		http.Error(w, "StatusBadRequestError: Please provide a member_id", 400)
 		return
 	}
 
-	key := keys[0]
-	fmt.Println("Request made for Representative " + key)
+	member_id := keys[0]
+	fmt.Println("Request made for Representative " + member_id)
 
-	// SOME SORTA CODE HERE TO GO FROM NAME TO CRP ID, WHICH I MIGHT CO-DEVELOP WITH THE TOPTEN
-	//for now, the next line is temporary
-	member_id := "K000388"
+	//member_id := "K000388" //For Debugging
 
 	//Fetch all bills a member of congress has recently voted on
 	membersAPIResponse, err := fetch_member_bills(member_id)
@@ -49,56 +47,65 @@ func BillsHandler(w http.ResponseWriter, r *http.Request) {
 		bill_slug := strings.TrimSuffix(eachMembersBill.Bill.BillID, "-117")
 
 		//Check if in the list of bill Latest Actions we want
-		if isActuallyABill(eachMembersBill.Question, eachMembersBill.Bill.BillID) {
+		if true /*isActuallyABill(eachMembersBill.Question, eachMembersBill.Bill.BillID)*/ {
 
 			//TODO - PUT THE "IF LATEST ACTION IS A DESRIRABLE ONE" STATEMENT HERE
-			fmt.Println(eachMembersBill)
+			//fmt.Println(eachMembersBill)
 			billsAPIResponse, err := fetch_bill_details(bill_slug)
 			if err != nil {
 				log.Fatal(err)
 			}
 
-			//From Members API
-			newVotesStruct := VotesToServe{}
-			newVotesStruct.Session = eachMembersBill.Session
-			newVotesStruct.RollCall = eachMembersBill.RollCall
-			newVotesStruct.VoteURI = eachMembersBill.VoteURI
-			newVotesStruct.Position = eachMembersBill.Position
+			if len(billsAPIResponse.Results) > 0 {
 
-			//From Bills API, and Members API
-			newVotesStruct.Bill = EachBillToServe{}
-			newVotesStruct.Bill.BillID = eachMembersBill.Bill.BillID
-			newVotesStruct.Bill.Number = eachMembersBill.Bill.Number
-			newVotesStruct.Bill.SponsorID = billsAPIResponse.Results[0].SponsorID
-			newVotesStruct.Bill.BillURI = eachMembersBill.Bill.BillURI
-			newVotesStruct.Bill.Title = eachMembersBill.Bill.Title
-			newVotesStruct.Bill.LatestAction = eachMembersBill.Bill.LatestAction
-			newVotesStruct.Bill.ShortTitle = billsAPIResponse.Results[0].ShortTitle
-			newVotesStruct.Bill.PrimarySubject = billsAPIResponse.Results[0].PrimarySubject
+				//From Members API
+				newVotesStruct := VotesToServe{}
+				newVotesStruct.Session = eachMembersBill.Session
+				newVotesStruct.RollCall = eachMembersBill.RollCall
+				newVotesStruct.VoteURI = eachMembersBill.VoteURI
+				newVotesStruct.Position = eachMembersBill.Position
 
-			//Opensecrets Correlation
-			newVotesStruct.Bill.OpensecretsSectorPrefix, newVotesStruct.Bill.OpensecretsSector, newVotesStruct.Bill.OpensecretsSectorLong, err = assign_opensecrets_data(billsAPIResponse.Results[0].PrimarySubject)
+				//From Bills API, and Members API
+				newVotesStruct.Bill = EachBillToServe{}
+				newVotesStruct.Bill.BillID = eachMembersBill.Bill.BillID
+				newVotesStruct.Bill.Number = eachMembersBill.Bill.Number
+				newVotesStruct.Bill.SponsorID = billsAPIResponse.Results[0].SponsorID
+				newVotesStruct.Bill.BillURI = eachMembersBill.Bill.BillURI
+				newVotesStruct.Bill.Title = eachMembersBill.Bill.Title
+				newVotesStruct.Bill.LatestAction = eachMembersBill.Bill.LatestAction
+				newVotesStruct.Bill.ShortTitle = billsAPIResponse.Results[0].ShortTitle
+				newVotesStruct.Bill.PrimarySubject = billsAPIResponse.Results[0].PrimarySubject
 
-			//Bills API Response
-			newVotesStruct.Bill.Committees = billsAPIResponse.Results[0].Committees
-			newVotesStruct.Bill.CommitteeCodes = billsAPIResponse.Results[0].CommitteeCodes
-			newVotesStruct.Bill.SubcommitteeCodes = billsAPIResponse.Results[0].SubcommitteeCodes
-			newVotesStruct.Bill.Summary = billsAPIResponse.Results[0].Summary
-			newVotesStruct.Bill.SummaryShort = billsAPIResponse.Results[0].SummaryShort
+				//Opensecrets Correlation
+				newVotesStruct.Bill.OpensecretsSectorPrefix, newVotesStruct.Bill.OpensecretsSector, newVotesStruct.Bill.OpensecretsSectorLong, err = assign_opensecrets_data(billsAPIResponse.Results[0].PrimarySubject)
+				if err != nil {
+					log.Fatal(err)
+					w.WriteHeader(http.StatusInternalServerError)
+					http.Error(w, "Internal Server Error in Data Correlation", 400)
+					return
+				}
 
-			//From Members API Again
-			//newVotesStruct.Amendment = eachMembersBill.Amendment //REMOVED CAUSE WE DONT NEED IT
-			newVotesStruct.Description = eachMembersBill.Description
-			newVotesStruct.Question = eachMembersBill.Question
-			newVotesStruct.Result = eachMembersBill.Result
-			newVotesStruct.Date = eachMembersBill.Date
-			newVotesStruct.Time = eachMembersBill.Time
-			newVotesStruct.Total = eachMembersBill.Total
-			newVotesStruct.Position = eachMembersBill.Position
+				//Bills API Response
+				newVotesStruct.Bill.Committees = billsAPIResponse.Results[0].Committees
+				newVotesStruct.Bill.CommitteeCodes = billsAPIResponse.Results[0].CommitteeCodes
+				newVotesStruct.Bill.SubcommitteeCodes = billsAPIResponse.Results[0].SubcommitteeCodes
+				newVotesStruct.Bill.Summary = billsAPIResponse.Results[0].Summary
+				newVotesStruct.Bill.SummaryShort = billsAPIResponse.Results[0].SummaryShort
 
-			billsToServe.Votes = append(billsToServe.Votes, newVotesStruct)
+				//From Members API Again
+				//newVotesStruct.Amendment = eachMembersBill.Amendment //REMOVED CAUSE WE DONT NEED IT
+				newVotesStruct.Description = eachMembersBill.Description
+				newVotesStruct.Question = eachMembersBill.Question
+				newVotesStruct.Result = eachMembersBill.Result
+				newVotesStruct.Date = eachMembersBill.Date
+				newVotesStruct.Time = eachMembersBill.Time
+				newVotesStruct.Total = eachMembersBill.Total
+				newVotesStruct.Position = eachMembersBill.Position
 
-			fmt.Println("Primary subject: " + billsAPIResponse.Results[0].PrimarySubject)
+				billsToServe.Votes = append(billsToServe.Votes, newVotesStruct)
+
+				//fmt.Println("Primary subject: " + billsAPIResponse.Results[0].PrimarySubject)
+			}
 		}
 	}
 
@@ -121,7 +128,10 @@ func isActuallyABill(question string, bill_id string) bool {
 		"On Motion to Suspend the Rules and Pass, as Amended",
 		"On Motion to Suspend the Rules and Pass",
 		"On Passage",
-		"On Agreeing to the Resolution":
+		"On Agreeing to the Resolution",
+		"On Passage of the Bill",
+		"On the Joint Resolution",
+		"On the Cloture Motion":
 
 		switch bill_id {
 		case
@@ -203,9 +213,9 @@ func fetch_bill_details(bill_slug string) (*BillsAPIResponse, error) {
 
 	if len(billsAPIResponse.Results) > 0 {
 		//FIX THIS and MAKE THIS BETTER
-		fmt.Println("Primary subject: " + billsAPIResponse.Results[0].PrimarySubject)
-		fmt.Println("Short title: " + billsAPIResponse.Results[0].ShortTitle)
-		fmt.Println()
+		//fmt.Println("Primary subject: " + billsAPIResponse.Results[0].PrimarySubject)
+		//fmt.Println("Short title: " + billsAPIResponse.Results[0].ShortTitle)
+		//fmt.Println()
 	} else {
 		fmt.Println("No data returned for " + bill_slug)
 	}
