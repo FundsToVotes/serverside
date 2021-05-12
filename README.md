@@ -13,9 +13,55 @@ Email the project team at hello@fundstovotes.info. Or, create an issue in our Gi
 
 ## Repository Purpose
 
-This repository contains the serverside code for the Funds to Votes project. It contains a gateway for our custom API backend, the dockerfiles and configuration for our custom mySQL database, and a variety of scripts for fetching and exploring the APIs we acquire data from. 
+This repository contains the serverside code for the Funds to Votes project. It contains a gateway for our [custom API backend](https://api.fundstovotes.info/hello), the dockerfiles and configuration for our custom mySQL database, and a variety of scripts for fetching and exploring the APIs we acquire data from. 
 
 This repository is primarily written in Go. Each continuously running component of the code also includes a Dockerfile, and is intended to be run inside a Docker container. These containers are then deployed to our Amazon AWS instance using the helper .sh scripts. 
+
+## Project Architecture 
+
+Go expects to see all Go projects on your computer to live in one directory, your `$GOPATH`/src directory. This repository is currently configured with the expectation that your `$GOPATH` is the location where the repository has been cloned. 
+
+Each folder within `src` is a different project. They have their own main.go files, build to their own .exe files, and generally run independently. 
+
+The projects, as well as significant subfiles, are listed below. All subfolders are considered "packages" of the main project. 
+
+- **gateway** - the most significant project. This is the code for the fundstovotes custom API backend. It contains: 
+    - helper scripts, as described in the *Hosting* section
+    - a Dockerfile for building the ftvgateway container
+    - `main.go` - A script that routes queries for the various API endpoints, loads enviroment variables, and connects to the database 
+    - `handlers` - a package containing the logic for each API endpoint
+        + `billsAndIndustries.go` - code for the Bills endpoint
+        + `topTen.go` - code for the topten endpoint
+            + TODO - ACTUALLY MAKE THIS FILE
+        + `dummybillsAndIndustries.go` - hardcoded example data for testing the bills and industries endpoint
+            - Note: This is currently out of date, due to restructuring
+        + `dummytop10Industries.go` - hardcoded example data for testing the top10 endpoint
+        + `data_structures.go` - type declarations for every Struct used in this folder
+        + `cors.go` - handler code for CORS preflight request security. 
+            + This code should probably never need to be modified
+        + `hello.go` - a basic "Hello World" endpoint used to confirm whether the gateway is online
+- **db** - This contains the configuration files for the repo used by the topten endpoint. 
+    - Dockerfile for building the docker container
+    - `schema.sql` - database schema
+    - `runDocker.sh` - helper command to run the database locally for testing purposes
+    - `seeTables.sh` - helper command to view all tables inside a currently running database
+- **archived_test_code** - this repository contains scripts that call the various APIs we pull data from. This code has all been either abandoned, or encorporated into one of the gateway handlers. It can be used to help in debugging or designing handlers. 
+    - bills_api_call - the code used for designing and testing the `bills` endpoint
+        + Can be useful if you want to view the responses from the Propublica Members and Bills API endpoints
+    - crp_id_calls - an abandoned project for fetching the CRP_id of a representative given their name. 
+        + Can be useful if you want to view the responses from the Propublica Members endpoint
+- **api-call** - Code for acquiring and storing the data used in the topTen endpoint
+    - `main.go` - For all members of congress, fetches openSecrets data on their top ten contributing industries, and stores it in the database
+    - assorted csv files - lists of CRP ids for the current members of Congress, for use in `main.go`
+    - `fetchdata` - package containing the functions involved in fetching the data from opensecrets 
+    - `useDB` - package containing the functions involved in communication with the database
+        + `creation.go` - creates a database if one doesn't exist, opens a connection to a database
+        + `insert.go` - inserts data into a database
+        + `dataStructures.go` - type declarations for every Struct used in this folder
+
+## API Endpoints
+
+TODO - DESCRIBE WHY WE HAVE EACH
 
 ## Contributing
 

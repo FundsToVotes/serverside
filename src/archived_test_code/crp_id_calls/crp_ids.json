@@ -1,0 +1,2650 @@
+{
+ "Person": [
+  {
+   "FirstName": "Alma",
+   "MiddleName": "",
+   "Lastname": "Adams",
+   "CrpID": "N00035451"
+  },
+  {
+   "FirstName": "Robert",
+   "MiddleName": "B.",
+   "Lastname": "Aderholt",
+   "CrpID": "N00003028"
+  },
+  {
+   "FirstName": "Pete",
+   "MiddleName": "",
+   "Lastname": "Aguilar",
+   "CrpID": "N00033997"
+  },
+  {
+   "FirstName": "Rick",
+   "MiddleName": "",
+   "Lastname": "Allen",
+   "CrpID": "N00033720"
+  },
+  {
+   "FirstName": "Colin",
+   "MiddleName": "",
+   "Lastname": "Allred",
+   "CrpID": "N00040989"
+  },
+  {
+   "FirstName": "Mark",
+   "MiddleName": "",
+   "Lastname": "Amodei",
+   "CrpID": "N00031177"
+  },
+  {
+   "FirstName": "Kelly",
+   "MiddleName": "",
+   "Lastname": "Armstrong",
+   "CrpID": "N00042868"
+  },
+  {
+   "FirstName": "Jodey",
+   "MiddleName": "",
+   "Lastname": "Arrington",
+   "CrpID": "N00038285"
+  },
+  {
+   "FirstName": "Jake",
+   "MiddleName": "",
+   "Lastname": "Auchincloss",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Cynthia",
+   "MiddleName": "",
+   "Lastname": "Axne",
+   "CrpID": "N00041104"
+  },
+  {
+   "FirstName": "Brian",
+   "MiddleName": "",
+   "Lastname": "Babin",
+   "CrpID": "N00005736"
+  },
+  {
+   "FirstName": "Don",
+   "MiddleName": "",
+   "Lastname": "Bacon",
+   "CrpID": "N00037049"
+  },
+  {
+   "FirstName": "James",
+   "MiddleName": "",
+   "Lastname": "Baird",
+   "CrpID": "N00041954"
+  },
+  {
+   "FirstName": "Troy",
+   "MiddleName": "",
+   "Lastname": "Balderson",
+   "CrpID": "N00042194"
+  },
+  {
+   "FirstName": "Jim",
+   "MiddleName": "",
+   "Lastname": "Banks",
+   "CrpID": "N00037185"
+  },
+  {
+   "FirstName": "Andy",
+   "MiddleName": "",
+   "Lastname": "Barr",
+   "CrpID": "N00031233"
+  },
+  {
+   "FirstName": "Nanette",
+   "MiddleName": "",
+   "Lastname": "Barragán",
+   "CrpID": "N00037019"
+  },
+  {
+   "FirstName": "Karen",
+   "MiddleName": "",
+   "Lastname": "Bass",
+   "CrpID": "N00031877"
+  },
+  {
+   "FirstName": "Joyce",
+   "MiddleName": "",
+   "Lastname": "Beatty",
+   "CrpID": "N00033904"
+  },
+  {
+   "FirstName": "Cliff",
+   "MiddleName": "",
+   "Lastname": "Bentz",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Ami",
+   "MiddleName": "",
+   "Lastname": "Bera",
+   "CrpID": "N00030717"
+  },
+  {
+   "FirstName": "Jack",
+   "MiddleName": "",
+   "Lastname": "Bergman",
+   "CrpID": "N00039533"
+  },
+  {
+   "FirstName": "Donald",
+   "MiddleName": "",
+   "Lastname": "Beyer",
+   "CrpID": "N00036018"
+  },
+  {
+   "FirstName": "Stephanie",
+   "MiddleName": "",
+   "Lastname": "Bice",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Andy",
+   "MiddleName": "",
+   "Lastname": "Biggs",
+   "CrpID": "N00039293"
+  },
+  {
+   "FirstName": "Gus",
+   "MiddleName": "",
+   "Lastname": "Bilirakis",
+   "CrpID": "N00027462"
+  },
+  {
+   "FirstName": "Sanford",
+   "MiddleName": "D.",
+   "Lastname": "Bishop",
+   "CrpID": "N00002674"
+  },
+  {
+   "FirstName": "Dan",
+   "MiddleName": "",
+   "Lastname": "Bishop",
+   "CrpID": "N00044335"
+  },
+  {
+   "FirstName": "Earl",
+   "MiddleName": "",
+   "Lastname": "Blumenauer",
+   "CrpID": "N00007727"
+  },
+  {
+   "FirstName": "Lisa",
+   "MiddleName": "",
+   "Lastname": "Blunt Rochester",
+   "CrpID": "N00038414"
+  },
+  {
+   "FirstName": "Lauren",
+   "MiddleName": "",
+   "Lastname": "Boebert",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Suzanne",
+   "MiddleName": "",
+   "Lastname": "Bonamici",
+   "CrpID": "N00033474"
+  },
+  {
+   "FirstName": "Mike",
+   "MiddleName": "",
+   "Lastname": "Bost",
+   "CrpID": "N00035420"
+  },
+  {
+   "FirstName": "Carolyn",
+   "MiddleName": "",
+   "Lastname": "Bourdeaux",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Jamaal",
+   "MiddleName": "",
+   "Lastname": "Bowman",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Brendan",
+   "MiddleName": "",
+   "Lastname": "Boyle",
+   "CrpID": "N00035307"
+  },
+  {
+   "FirstName": "Kevin",
+   "MiddleName": "",
+   "Lastname": "Brady",
+   "CrpID": "N00005883"
+  },
+  {
+   "FirstName": "Mo",
+   "MiddleName": "",
+   "Lastname": "Brooks",
+   "CrpID": "N00030910"
+  },
+  {
+   "FirstName": "Anthony",
+   "MiddleName": "",
+   "Lastname": "Brown",
+   "CrpID": "N00036999"
+  },
+  {
+   "FirstName": "Julia",
+   "MiddleName": "",
+   "Lastname": "Brownley",
+   "CrpID": "N00034254"
+  },
+  {
+   "FirstName": "Vern",
+   "MiddleName": "",
+   "Lastname": "Buchanan",
+   "CrpID": "N00027626"
+  },
+  {
+   "FirstName": "Ken",
+   "MiddleName": "",
+   "Lastname": "Buck",
+   "CrpID": "N00030829"
+  },
+  {
+   "FirstName": "Larry",
+   "MiddleName": "",
+   "Lastname": "Bucshon",
+   "CrpID": "N00031227"
+  },
+  {
+   "FirstName": "Ted",
+   "MiddleName": "",
+   "Lastname": "Budd",
+   "CrpID": "N00039551"
+  },
+  {
+   "FirstName": "Tim",
+   "MiddleName": "",
+   "Lastname": "Burchett",
+   "CrpID": "N00041594"
+  },
+  {
+   "FirstName": "Michael",
+   "MiddleName": "C.",
+   "Lastname": "Burgess",
+   "CrpID": "N00025219"
+  },
+  {
+   "FirstName": "Cori",
+   "MiddleName": "",
+   "Lastname": "Bush",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Cheri",
+   "MiddleName": "",
+   "Lastname": "Bustos",
+   "CrpID": "N00033390"
+  },
+  {
+   "FirstName": "G.",
+   "MiddleName": "K.",
+   "Lastname": "Butterfield",
+   "CrpID": "N00027035"
+  },
+  {
+   "FirstName": "Ken",
+   "MiddleName": "",
+   "Lastname": "Calvert",
+   "CrpID": "N00007099"
+  },
+  {
+   "FirstName": "Kat",
+   "MiddleName": "",
+   "Lastname": "Cammack",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Salud",
+   "MiddleName": "",
+   "Lastname": "Carbajal",
+   "CrpID": "N00037015"
+  },
+  {
+   "FirstName": "Tony",
+   "MiddleName": "",
+   "Lastname": "Cárdenas",
+   "CrpID": "N00033373"
+  },
+  {
+   "FirstName": "Jerry",
+   "MiddleName": "",
+   "Lastname": "Carl",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "André",
+   "MiddleName": "",
+   "Lastname": "Carson",
+   "CrpID": "N00029513"
+  },
+  {
+   "FirstName": "Buddy",
+   "MiddleName": "",
+   "Lastname": "Carter",
+   "CrpID": "N00035346"
+  },
+  {
+   "FirstName": "John",
+   "MiddleName": "",
+   "Lastname": "Carter",
+   "CrpID": "N00025095"
+  },
+  {
+   "FirstName": "Matt",
+   "MiddleName": "",
+   "Lastname": "Cartwright",
+   "CrpID": "N00034128"
+  },
+  {
+   "FirstName": "Ed",
+   "MiddleName": "",
+   "Lastname": "Case",
+   "CrpID": "N00025882"
+  },
+  {
+   "FirstName": "Sean",
+   "MiddleName": "",
+   "Lastname": "Casten",
+   "CrpID": "N00041338"
+  },
+  {
+   "FirstName": "Kathy",
+   "MiddleName": "",
+   "Lastname": "Castor",
+   "CrpID": "N00027514"
+  },
+  {
+   "FirstName": "Joaquín",
+   "MiddleName": "",
+   "Lastname": "Castro",
+   "CrpID": "N00033316"
+  },
+  {
+   "FirstName": "Madison",
+   "MiddleName": "",
+   "Lastname": "Cawthorn",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Steven",
+   "MiddleName": "J.",
+   "Lastname": "Chabot",
+   "CrpID": "N00003689"
+  },
+  {
+   "FirstName": "Liz",
+   "MiddleName": "",
+   "Lastname": "Cheney",
+   "CrpID": "N00035504"
+  },
+  {
+   "FirstName": "Judy",
+   "MiddleName": "",
+   "Lastname": "Chu",
+   "CrpID": "N00030600"
+  },
+  {
+   "FirstName": "David",
+   "MiddleName": "",
+   "Lastname": "Cicilline",
+   "CrpID": "N00032019"
+  },
+  {
+   "FirstName": "Katherine",
+   "MiddleName": "",
+   "Lastname": "Clark",
+   "CrpID": "N00035278"
+  },
+  {
+   "FirstName": "Yvette",
+   "MiddleName": "D.",
+   "Lastname": "Clarke",
+   "CrpID": "N00026961"
+  },
+  {
+   "FirstName": "Emanuel",
+   "MiddleName": "",
+   "Lastname": "Cleaver",
+   "CrpID": "N00026790"
+  },
+  {
+   "FirstName": "Ben",
+   "MiddleName": "",
+   "Lastname": "Cline",
+   "CrpID": "N00042296"
+  },
+  {
+   "FirstName": "Michael",
+   "MiddleName": "",
+   "Lastname": "Cloud",
+   "CrpID": "N00041882"
+  },
+  {
+   "FirstName": "James",
+   "MiddleName": "E.",
+   "Lastname": "Clyburn",
+   "CrpID": "N00002408"
+  },
+  {
+   "FirstName": "Andrew",
+   "MiddleName": "",
+   "Lastname": "Clyde",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Steve",
+   "MiddleName": "",
+   "Lastname": "Cohen",
+   "CrpID": "N00003225"
+  },
+  {
+   "FirstName": "Tom",
+   "MiddleName": "",
+   "Lastname": "Cole",
+   "CrpID": "N00025726"
+  },
+  {
+   "FirstName": "James",
+   "MiddleName": "",
+   "Lastname": "Comer",
+   "CrpID": "N00038260"
+  },
+  {
+   "FirstName": "Gerald",
+   "MiddleName": "E.",
+   "Lastname": "Connolly",
+   "CrpID": "N00029891"
+  },
+  {
+   "FirstName": "Jim",
+   "MiddleName": "",
+   "Lastname": "Cooper",
+   "CrpID": "N00003132"
+  },
+  {
+   "FirstName": "J.",
+   "MiddleName": "Luis",
+   "Lastname": "Correa",
+   "CrpID": "N00037260"
+  },
+  {
+   "FirstName": "Jim",
+   "MiddleName": "",
+   "Lastname": "Costa",
+   "CrpID": "N00026341"
+  },
+  {
+   "FirstName": "Joe",
+   "MiddleName": "",
+   "Lastname": "Courtney",
+   "CrpID": "N00024842"
+  },
+  {
+   "FirstName": "Angie",
+   "MiddleName": "",
+   "Lastname": "Craig",
+   "CrpID": "N00037039"
+  },
+  {
+   "FirstName": "Rick",
+   "MiddleName": "",
+   "Lastname": "Crawford",
+   "CrpID": "N00030770"
+  },
+  {
+   "FirstName": "Dan",
+   "MiddleName": "",
+   "Lastname": "Crenshaw",
+   "CrpID": "N00042224"
+  },
+  {
+   "FirstName": "Charlie",
+   "MiddleName": "",
+   "Lastname": "Crist",
+   "CrpID": "N00002942"
+  },
+  {
+   "FirstName": "Jason",
+   "MiddleName": "",
+   "Lastname": "Crow",
+   "CrpID": "N00040876"
+  },
+  {
+   "FirstName": "Henry",
+   "MiddleName": "",
+   "Lastname": "Cuellar",
+   "CrpID": "N00024978"
+  },
+  {
+   "FirstName": "John",
+   "MiddleName": "",
+   "Lastname": "Curtis",
+   "CrpID": "N00041221"
+  },
+  {
+   "FirstName": "Sharice",
+   "MiddleName": "",
+   "Lastname": "Davids",
+   "CrpID": "N00042626"
+  },
+  {
+   "FirstName": "Warren",
+   "MiddleName": "",
+   "Lastname": "Davidson",
+   "CrpID": "N00038767"
+  },
+  {
+   "FirstName": "Rodney",
+   "MiddleName": "",
+   "Lastname": "Davis",
+   "CrpID": "N00034784"
+  },
+  {
+   "FirstName": "Danny",
+   "MiddleName": "K.",
+   "Lastname": "Davis",
+   "CrpID": "N00004884"
+  },
+  {
+   "FirstName": "Madeleine",
+   "MiddleName": "",
+   "Lastname": "Dean",
+   "CrpID": "N00042894"
+  },
+  {
+   "FirstName": "Peter",
+   "MiddleName": "A.",
+   "Lastname": "DeFazio",
+   "CrpID": "N00007781"
+  },
+  {
+   "FirstName": "Diana",
+   "MiddleName": "",
+   "Lastname": "DeGette",
+   "CrpID": "N00006134"
+  },
+  {
+   "FirstName": "Rosa",
+   "MiddleName": "",
+   "Lastname": "DeLauro",
+   "CrpID": "N00000615"
+  },
+  {
+   "FirstName": "Suzan",
+   "MiddleName": "K.",
+   "Lastname": "DelBene",
+   "CrpID": "N00030693"
+  },
+  {
+   "FirstName": "Antonio",
+   "MiddleName": "",
+   "Lastname": "Delgado",
+   "CrpID": "N00040741"
+  },
+  {
+   "FirstName": "Val",
+   "MiddleName": "",
+   "Lastname": "Demings",
+   "CrpID": "N00033449"
+  },
+  {
+   "FirstName": "Mark",
+   "MiddleName": "",
+   "Lastname": "DeSaulnier",
+   "CrpID": "N00030709"
+  },
+  {
+   "FirstName": "Scott",
+   "MiddleName": "",
+   "Lastname": "DesJarlais",
+   "CrpID": "N00030957"
+  },
+  {
+   "FirstName": "Ted",
+   "MiddleName": "",
+   "Lastname": "Deutch",
+   "CrpID": "N00031317"
+  },
+  {
+   "FirstName": "Mario",
+   "MiddleName": "",
+   "Lastname": "Diaz-Balart",
+   "CrpID": "N00025337"
+  },
+  {
+   "FirstName": "Debbie",
+   "MiddleName": "",
+   "Lastname": "Dingell",
+   "CrpID": "N00036149"
+  },
+  {
+   "FirstName": "Lloyd",
+   "MiddleName": "",
+   "Lastname": "Doggett",
+   "CrpID": "N00006023"
+  },
+  {
+   "FirstName": "Byron",
+   "MiddleName": "",
+   "Lastname": "Donalds",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Mike",
+   "MiddleName": "",
+   "Lastname": "Doyle",
+   "CrpID": "N00001373"
+  },
+  {
+   "FirstName": "Jeffrey",
+   "MiddleName": "",
+   "Lastname": "Duncan",
+   "CrpID": "N00030752"
+  },
+  {
+   "FirstName": "Neal",
+   "MiddleName": "",
+   "Lastname": "Dunn",
+   "CrpID": "N00037442"
+  },
+  {
+   "FirstName": "Tom",
+   "MiddleName": "",
+   "Lastname": "Emmer",
+   "CrpID": "N00035440"
+  },
+  {
+   "FirstName": "Veronica",
+   "MiddleName": "",
+   "Lastname": "Escobar",
+   "CrpID": "N00041702"
+  },
+  {
+   "FirstName": "Anna",
+   "MiddleName": "G.",
+   "Lastname": "Eshoo",
+   "CrpID": "N00007335"
+  },
+  {
+   "FirstName": "Adriano",
+   "MiddleName": "",
+   "Lastname": "Espaillat",
+   "CrpID": "N00034549"
+  },
+  {
+   "FirstName": "Ron",
+   "MiddleName": "",
+   "Lastname": "Estes",
+   "CrpID": "N00040712"
+  },
+  {
+   "FirstName": "Dwight",
+   "MiddleName": "",
+   "Lastname": "Evans",
+   "CrpID": "N00038450"
+  },
+  {
+   "FirstName": "Pat",
+   "MiddleName": "",
+   "Lastname": "Fallon",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Randy",
+   "MiddleName": "",
+   "Lastname": "Feenstra",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "A.",
+   "MiddleName": "Drew",
+   "Lastname": "Ferguson",
+   "CrpID": "N00039090"
+  },
+  {
+   "FirstName": "Teresa",
+   "MiddleName": "Leger",
+   "Lastname": "Fernandez",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Michelle",
+   "MiddleName": "",
+   "Lastname": "Fischbach",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Scott",
+   "MiddleName": "",
+   "Lastname": "Fitzgerald",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Brian",
+   "MiddleName": "",
+   "Lastname": "Fitzpatrick",
+   "CrpID": "N00038779"
+  },
+  {
+   "FirstName": "Chuck",
+   "MiddleName": "",
+   "Lastname": "Fleischmann",
+   "CrpID": "N00030815"
+  },
+  {
+   "FirstName": "Lizzie",
+   "MiddleName": "",
+   "Lastname": "Fletcher",
+   "CrpID": "N00041194"
+  },
+  {
+   "FirstName": "Jeff",
+   "MiddleName": "",
+   "Lastname": "Fortenberry",
+   "CrpID": "N00026631"
+  },
+  {
+   "FirstName": "Bill",
+   "MiddleName": "",
+   "Lastname": "Foster",
+   "CrpID": "N00029139"
+  },
+  {
+   "FirstName": "Virginia",
+   "MiddleName": "",
+   "Lastname": "Foxx",
+   "CrpID": "N00026166"
+  },
+  {
+   "FirstName": "Lois",
+   "MiddleName": "",
+   "Lastname": "Frankel",
+   "CrpID": "N00002893"
+  },
+  {
+   "FirstName": "Scott",
+   "MiddleName": "",
+   "Lastname": "Franklin",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Marcia",
+   "MiddleName": "L.",
+   "Lastname": "Fudge",
+   "CrpID": "N00030490"
+  },
+  {
+   "FirstName": "Russ",
+   "MiddleName": "",
+   "Lastname": "Fulcher",
+   "CrpID": "N00041335"
+  },
+  {
+   "FirstName": "Matt",
+   "MiddleName": "",
+   "Lastname": "Gaetz",
+   "CrpID": "N00039503"
+  },
+  {
+   "FirstName": "Mike",
+   "MiddleName": "",
+   "Lastname": "Gallagher",
+   "CrpID": "N00039330"
+  },
+  {
+   "FirstName": "Ruben",
+   "MiddleName": "",
+   "Lastname": "Gallego",
+   "CrpID": "N00036097"
+  },
+  {
+   "FirstName": "John",
+   "MiddleName": "",
+   "Lastname": "Garamendi",
+   "CrpID": "N00030856"
+  },
+  {
+   "FirstName": "Andrew",
+   "MiddleName": "",
+   "Lastname": "Garbarino",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Mike",
+   "MiddleName": "",
+   "Lastname": "Garcia",
+   "CrpID": "N00044298"
+  },
+  {
+   "FirstName": "Jesús",
+   "MiddleName": "",
+   "Lastname": "García",
+   "CrpID": "N00042114"
+  },
+  {
+   "FirstName": "Sylvia",
+   "MiddleName": "",
+   "Lastname": "Garcia",
+   "CrpID": "N00042282"
+  },
+  {
+   "FirstName": "Bob",
+   "MiddleName": "",
+   "Lastname": "Gibbs",
+   "CrpID": "N00031128"
+  },
+  {
+   "FirstName": "Carlos",
+   "MiddleName": "",
+   "Lastname": "Giménez",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Louie",
+   "MiddleName": "",
+   "Lastname": "Gohmert",
+   "CrpID": "N00026148"
+  },
+  {
+   "FirstName": "Jared",
+   "MiddleName": "",
+   "Lastname": "Golden",
+   "CrpID": "N00041668"
+  },
+  {
+   "FirstName": "Jimmy",
+   "MiddleName": "",
+   "Lastname": "Gomez",
+   "CrpID": "N00040597"
+  },
+  {
+   "FirstName": "Tony",
+   "MiddleName": "",
+   "Lastname": "Gonzales",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Anthony",
+   "MiddleName": "",
+   "Lastname": "Gonzalez",
+   "CrpID": "N00041690"
+  },
+  {
+   "FirstName": "Vicente",
+   "MiddleName": "",
+   "Lastname": "Gonzalez",
+   "CrpID": "N00038809"
+  },
+  {
+   "FirstName": "Jenniffer",
+   "MiddleName": "",
+   "Lastname": "González-Colón",
+   "CrpID": "N00037615"
+  },
+  {
+   "FirstName": "Robert",
+   "MiddleName": "",
+   "Lastname": "Good",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Lance",
+   "MiddleName": "",
+   "Lastname": "Gooden",
+   "CrpID": "N00042237"
+  },
+  {
+   "FirstName": "Paul",
+   "MiddleName": "",
+   "Lastname": "Gosar",
+   "CrpID": "N00030771"
+  },
+  {
+   "FirstName": "Josh",
+   "MiddleName": "",
+   "Lastname": "Gottheimer",
+   "CrpID": "N00036944"
+  },
+  {
+   "FirstName": "Kay",
+   "MiddleName": "",
+   "Lastname": "Granger",
+   "CrpID": "N00008799"
+  },
+  {
+   "FirstName": "Sam",
+   "MiddleName": "",
+   "Lastname": "Graves",
+   "CrpID": "N00013323"
+  },
+  {
+   "FirstName": "Garret",
+   "MiddleName": "",
+   "Lastname": "Graves",
+   "CrpID": "N00036135"
+  },
+  {
+   "FirstName": "Mark",
+   "MiddleName": "",
+   "Lastname": "Green",
+   "CrpID": "N00041873"
+  },
+  {
+   "FirstName": "Al",
+   "MiddleName": "",
+   "Lastname": "Green",
+   "CrpID": "N00026686"
+  },
+  {
+   "FirstName": "Marjorie",
+   "MiddleName": "Taylor",
+   "Lastname": "Greene",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Morgan",
+   "MiddleName": "",
+   "Lastname": "Griffith",
+   "CrpID": "N00032029"
+  },
+  {
+   "FirstName": "Raúl",
+   "MiddleName": "M.",
+   "Lastname": "Grijalva",
+   "CrpID": "N00025284"
+  },
+  {
+   "FirstName": "Glenn",
+   "MiddleName": "",
+   "Lastname": "Grothman",
+   "CrpID": "N00036409"
+  },
+  {
+   "FirstName": "Michael",
+   "MiddleName": "",
+   "Lastname": "Guest",
+   "CrpID": "N00042458"
+  },
+  {
+   "FirstName": "Brett",
+   "MiddleName": "",
+   "Lastname": "Guthrie",
+   "CrpID": "N00029675"
+  },
+  {
+   "FirstName": "Debra",
+   "MiddleName": "",
+   "Lastname": "Haaland",
+   "CrpID": "N00040933"
+  },
+  {
+   "FirstName": "Jim",
+   "MiddleName": "",
+   "Lastname": "Hagedorn",
+   "CrpID": "N00031390"
+  },
+  {
+   "FirstName": "Josh",
+   "MiddleName": "",
+   "Lastname": "Harder",
+   "CrpID": "N00040853"
+  },
+  {
+   "FirstName": "Andy",
+   "MiddleName": "",
+   "Lastname": "Harris",
+   "CrpID": "N00029147"
+  },
+  {
+   "FirstName": "Diana",
+   "MiddleName": "",
+   "Lastname": "Harshbarger",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Vicky",
+   "MiddleName": "",
+   "Lastname": "Hartzler",
+   "CrpID": "N00031005"
+  },
+  {
+   "FirstName": "Alcee",
+   "MiddleName": "L.",
+   "Lastname": "Hastings",
+   "CrpID": "N00002884"
+  },
+  {
+   "FirstName": "Jahana",
+   "MiddleName": "",
+   "Lastname": "Hayes",
+   "CrpID": "N00043421"
+  },
+  {
+   "FirstName": "Kevin",
+   "MiddleName": "",
+   "Lastname": "Hern",
+   "CrpID": "N00040829"
+  },
+  {
+   "FirstName": "Yvette",
+   "MiddleName": "",
+   "Lastname": "Herrell",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Jaime",
+   "MiddleName": "",
+   "Lastname": "Herrera Beutler",
+   "CrpID": "N00031559"
+  },
+  {
+   "FirstName": "Jody",
+   "MiddleName": "",
+   "Lastname": "Hice",
+   "CrpID": "N00032243"
+  },
+  {
+   "FirstName": "Brian",
+   "MiddleName": "",
+   "Lastname": "Higgins",
+   "CrpID": "N00027060"
+  },
+  {
+   "FirstName": "Clay",
+   "MiddleName": "",
+   "Lastname": "Higgins",
+   "CrpID": "N00039953"
+  },
+  {
+   "FirstName": "French",
+   "MiddleName": "",
+   "Lastname": "Hill",
+   "CrpID": "N00035792"
+  },
+  {
+   "FirstName": "Jim",
+   "MiddleName": "",
+   "Lastname": "Himes",
+   "CrpID": "N00029070"
+  },
+  {
+   "FirstName": "Ashley",
+   "MiddleName": "",
+   "Lastname": "Hinson",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Trey",
+   "MiddleName": "",
+   "Lastname": "Hollingsworth",
+   "CrpID": "N00038429"
+  },
+  {
+   "FirstName": "Steven",
+   "MiddleName": "",
+   "Lastname": "Horsford",
+   "CrpID": "N00033638"
+  },
+  {
+   "FirstName": "Chrissy",
+   "MiddleName": "",
+   "Lastname": "Houlahan",
+   "CrpID": "N00040949"
+  },
+  {
+   "FirstName": "Steny",
+   "MiddleName": "H.",
+   "Lastname": "Hoyer",
+   "CrpID": "N00001821"
+  },
+  {
+   "FirstName": "Richard",
+   "MiddleName": "",
+   "Lastname": "Hudson",
+   "CrpID": "N00033630"
+  },
+  {
+   "FirstName": "Jared",
+   "MiddleName": "",
+   "Lastname": "Huffman",
+   "CrpID": "N00033030"
+  },
+  {
+   "FirstName": "Bill",
+   "MiddleName": "",
+   "Lastname": "Huizenga",
+   "CrpID": "N00030673"
+  },
+  {
+   "FirstName": "Darrell",
+   "MiddleName": "",
+   "Lastname": "Issa",
+   "CrpID": "N00007017"
+  },
+  {
+   "FirstName": "Ronny",
+   "MiddleName": "",
+   "Lastname": "Jackson",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Sheila",
+   "MiddleName": "",
+   "Lastname": "Jackson Lee",
+   "CrpID": "N00005818"
+  },
+  {
+   "FirstName": "Sara",
+   "MiddleName": "",
+   "Lastname": "Jacobs",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Chris",
+   "MiddleName": "",
+   "Lastname": "Jacobs",
+   "CrpID": "N00044575"
+  },
+  {
+   "FirstName": "Pramila",
+   "MiddleName": "",
+   "Lastname": "Jayapal",
+   "CrpID": "N00038858"
+  },
+  {
+   "FirstName": "Hakeem",
+   "MiddleName": "",
+   "Lastname": "Jeffries",
+   "CrpID": "N00033640"
+  },
+  {
+   "FirstName": "Hank",
+   "MiddleName": "",
+   "Lastname": "Johnson",
+   "CrpID": "N00027848"
+  },
+  {
+   "FirstName": "Eddie",
+   "MiddleName": "Bernice",
+   "Lastname": "Johnson",
+   "CrpID": "N00008122"
+  },
+  {
+   "FirstName": "Mike",
+   "MiddleName": "",
+   "Lastname": "Johnson",
+   "CrpID": "N00039106"
+  },
+  {
+   "FirstName": "Dusty",
+   "MiddleName": "",
+   "Lastname": "Johnson",
+   "CrpID": "N00040559"
+  },
+  {
+   "FirstName": "Bill",
+   "MiddleName": "",
+   "Lastname": "Johnson",
+   "CrpID": "N00032088"
+  },
+  {
+   "FirstName": "Mondaire",
+   "MiddleName": "",
+   "Lastname": "Jones",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Jim",
+   "MiddleName": "",
+   "Lastname": "Jordan",
+   "CrpID": "N00027894"
+  },
+  {
+   "FirstName": "John",
+   "MiddleName": "",
+   "Lastname": "Joyce",
+   "CrpID": "N00043242"
+  },
+  {
+   "FirstName": "Dave",
+   "MiddleName": "",
+   "Lastname": "Joyce",
+   "CrpID": "N00035007"
+  },
+  {
+   "FirstName": "Kaialiʻi",
+   "MiddleName": "",
+   "Lastname": "Kahele",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Marcy",
+   "MiddleName": "",
+   "Lastname": "Kaptur",
+   "CrpID": "N00003522"
+  },
+  {
+   "FirstName": "John",
+   "MiddleName": "",
+   "Lastname": "Katko",
+   "CrpID": "N00035934"
+  },
+  {
+   "FirstName": "Bill",
+   "MiddleName": "",
+   "Lastname": "Keating",
+   "CrpID": "N00031933"
+  },
+  {
+   "FirstName": "Fred",
+   "MiddleName": "",
+   "Lastname": "Keller",
+   "CrpID": "N00044065"
+  },
+  {
+   "FirstName": "Mike",
+   "MiddleName": "",
+   "Lastname": "Kelly",
+   "CrpID": "N00031647"
+  },
+  {
+   "FirstName": "Robin",
+   "MiddleName": "",
+   "Lastname": "Kelly",
+   "CrpID": "N00035215"
+  },
+  {
+   "FirstName": "Trent",
+   "MiddleName": "",
+   "Lastname": "Kelly",
+   "CrpID": "N00037003"
+  },
+  {
+   "FirstName": "Ro",
+   "MiddleName": "",
+   "Lastname": "Khanna",
+   "CrpID": "N00026427"
+  },
+  {
+   "FirstName": "Dan",
+   "MiddleName": "",
+   "Lastname": "Kildee",
+   "CrpID": "N00033395"
+  },
+  {
+   "FirstName": "Derek",
+   "MiddleName": "",
+   "Lastname": "Kilmer",
+   "CrpID": "N00034453"
+  },
+  {
+   "FirstName": "Andy",
+   "MiddleName": "",
+   "Lastname": "Kim",
+   "CrpID": "N00041370"
+  },
+  {
+   "FirstName": "Young",
+   "MiddleName": "",
+   "Lastname": "Kim",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Ron",
+   "MiddleName": "",
+   "Lastname": "Kind",
+   "CrpID": "N00004403"
+  },
+  {
+   "FirstName": "Adam",
+   "MiddleName": "",
+   "Lastname": "Kinzinger",
+   "CrpID": "N00030667"
+  },
+  {
+   "FirstName": "Ann",
+   "MiddleName": "",
+   "Lastname": "Kirkpatrick",
+   "CrpID": "N00029260"
+  },
+  {
+   "FirstName": "Raja",
+   "MiddleName": "",
+   "Lastname": "Krishnamoorthi",
+   "CrpID": "N00033240"
+  },
+  {
+   "FirstName": "Ann",
+   "MiddleName": "McLane",
+   "Lastname": "Kuster",
+   "CrpID": "N00030875"
+  },
+  {
+   "FirstName": "David",
+   "MiddleName": "",
+   "Lastname": "Kustoff",
+   "CrpID": "N00025445"
+  },
+  {
+   "FirstName": "Darin",
+   "MiddleName": "M.",
+   "Lastname": "LaHood",
+   "CrpID": "N00037031"
+  },
+  {
+   "FirstName": "Doug",
+   "MiddleName": "",
+   "Lastname": "LaMalfa",
+   "CrpID": "N00033987"
+  },
+  {
+   "FirstName": "Conor",
+   "MiddleName": "",
+   "Lastname": "Lamb",
+   "CrpID": "N00041870"
+  },
+  {
+   "FirstName": "Doug",
+   "MiddleName": "",
+   "Lastname": "Lamborn",
+   "CrpID": "N00028133"
+  },
+  {
+   "FirstName": "Jim",
+   "MiddleName": "",
+   "Lastname": "Langevin",
+   "CrpID": "N00009724"
+  },
+  {
+   "FirstName": "Rick",
+   "MiddleName": "",
+   "Lastname": "Larsen",
+   "CrpID": "N00009759"
+  },
+  {
+   "FirstName": "John",
+   "MiddleName": "B.",
+   "Lastname": "Larson",
+   "CrpID": "N00000575"
+  },
+  {
+   "FirstName": "Robert",
+   "MiddleName": "E.",
+   "Lastname": "Latta",
+   "CrpID": "N00012233"
+  },
+  {
+   "FirstName": "Jake",
+   "MiddleName": "",
+   "Lastname": "LaTurner",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Brenda",
+   "MiddleName": "",
+   "Lastname": "Lawrence",
+   "CrpID": "N00034068"
+  },
+  {
+   "FirstName": "Al",
+   "MiddleName": "",
+   "Lastname": "Lawson",
+   "CrpID": "N00030642"
+  },
+  {
+   "FirstName": "Barbara",
+   "MiddleName": "",
+   "Lastname": "Lee",
+   "CrpID": "N00008046"
+  },
+  {
+   "FirstName": "Susie",
+   "MiddleName": "",
+   "Lastname": "Lee",
+   "CrpID": "N00037247"
+  },
+  {
+   "FirstName": "Debbie",
+   "MiddleName": "",
+   "Lastname": "Lesko",
+   "CrpID": "N00042056"
+  },
+  {
+   "FirstName": "Julia",
+   "MiddleName": "",
+   "Lastname": "Letlow",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Mike",
+   "MiddleName": "",
+   "Lastname": "Levin",
+   "CrpID": "N00040667"
+  },
+  {
+   "FirstName": "Andy",
+   "MiddleName": "",
+   "Lastname": "Levin",
+   "CrpID": "N00042149"
+  },
+  {
+   "FirstName": "Ted",
+   "MiddleName": "",
+   "Lastname": "Lieu",
+   "CrpID": "N00035825"
+  },
+  {
+   "FirstName": "Zoe",
+   "MiddleName": "",
+   "Lastname": "Lofgren",
+   "CrpID": "N00007479"
+  },
+  {
+   "FirstName": "Billy",
+   "MiddleName": "",
+   "Lastname": "Long",
+   "CrpID": "N00030676"
+  },
+  {
+   "FirstName": "Barry",
+   "MiddleName": "",
+   "Lastname": "Loudermilk",
+   "CrpID": "N00035347"
+  },
+  {
+   "FirstName": "Alan",
+   "MiddleName": "",
+   "Lastname": "Lowenthal",
+   "CrpID": "N00033274"
+  },
+  {
+   "FirstName": "Frank",
+   "MiddleName": "D.",
+   "Lastname": "Lucas",
+   "CrpID": "N00005559"
+  },
+  {
+   "FirstName": "Blaine",
+   "MiddleName": "",
+   "Lastname": "Luetkemeyer",
+   "CrpID": "N00030026"
+  },
+  {
+   "FirstName": "Elaine",
+   "MiddleName": "",
+   "Lastname": "Luria",
+   "CrpID": "N00042293"
+  },
+  {
+   "FirstName": "Stephen",
+   "MiddleName": "F.",
+   "Lastname": "Lynch",
+   "CrpID": "N00013855"
+  },
+  {
+   "FirstName": "Nancy",
+   "MiddleName": "",
+   "Lastname": "Mace",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Tom",
+   "MiddleName": "",
+   "Lastname": "Malinowski",
+   "CrpID": "N00041843"
+  },
+  {
+   "FirstName": "Nicole",
+   "MiddleName": "",
+   "Lastname": "Malliotakis",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Sean",
+   "MiddleName": "Patrick",
+   "Lastname": "Maloney",
+   "CrpID": "N00034277"
+  },
+  {
+   "FirstName": "Carolyn",
+   "MiddleName": "B.",
+   "Lastname": "Maloney",
+   "CrpID": "N00000078"
+  },
+  {
+   "FirstName": "Tracey",
+   "MiddleName": "",
+   "Lastname": "Mann",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Kathy",
+   "MiddleName": "",
+   "Lastname": "Manning",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Thomas",
+   "MiddleName": "",
+   "Lastname": "Massie",
+   "CrpID": "N00034041"
+  },
+  {
+   "FirstName": "Brian",
+   "MiddleName": "",
+   "Lastname": "Mast",
+   "CrpID": "N00037269"
+  },
+  {
+   "FirstName": "Doris",
+   "MiddleName": "",
+   "Lastname": "Matsui",
+   "CrpID": "N00027459"
+  },
+  {
+   "FirstName": "Lucy",
+   "MiddleName": "",
+   "Lastname": "McBath",
+   "CrpID": "N00042813"
+  },
+  {
+   "FirstName": "Kevin",
+   "MiddleName": "",
+   "Lastname": "McCarthy",
+   "CrpID": "N00028152"
+  },
+  {
+   "FirstName": "Michael",
+   "MiddleName": "",
+   "Lastname": "McCaul",
+   "CrpID": "N00026460"
+  },
+  {
+   "FirstName": "Lisa",
+   "MiddleName": "",
+   "Lastname": "McClain",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Tom",
+   "MiddleName": "",
+   "Lastname": "McClintock",
+   "CrpID": "N00006863"
+  },
+  {
+   "FirstName": "Betty",
+   "MiddleName": "",
+   "Lastname": "McCollum",
+   "CrpID": "N00012942"
+  },
+  {
+   "FirstName": "A.",
+   "MiddleName": "Donald",
+   "Lastname": "McEachin",
+   "CrpID": "N00039327"
+  },
+  {
+   "FirstName": "Jim",
+   "MiddleName": "",
+   "Lastname": "McGovern",
+   "CrpID": "N00000179"
+  },
+  {
+   "FirstName": "Patrick",
+   "MiddleName": "T.",
+   "Lastname": "McHenry",
+   "CrpID": "N00026627"
+  },
+  {
+   "FirstName": "David",
+   "MiddleName": "",
+   "Lastname": "McKinley",
+   "CrpID": "N00031681"
+  },
+  {
+   "FirstName": "Cathy",
+   "MiddleName": "",
+   "Lastname": "McMorris Rodgers",
+   "CrpID": "N00026314"
+  },
+  {
+   "FirstName": "Jerry",
+   "MiddleName": "",
+   "Lastname": "McNerney",
+   "CrpID": "N00026926"
+  },
+  {
+   "FirstName": "Gregory",
+   "MiddleName": "W.",
+   "Lastname": "Meeks",
+   "CrpID": "N00001171"
+  },
+  {
+   "FirstName": "Peter",
+   "MiddleName": "",
+   "Lastname": "Meijer",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Grace",
+   "MiddleName": "",
+   "Lastname": "Meng",
+   "CrpID": "N00034547"
+  },
+  {
+   "FirstName": "Daniel",
+   "MiddleName": "",
+   "Lastname": "Meuser",
+   "CrpID": "N00029416"
+  },
+  {
+   "FirstName": "Kweisi",
+   "MiddleName": "",
+   "Lastname": "Mfume",
+   "CrpID": "N00001799"
+  },
+  {
+   "FirstName": "Mary",
+   "MiddleName": "",
+   "Lastname": "Miller",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Carol",
+   "MiddleName": "",
+   "Lastname": "Miller",
+   "CrpID": "N00041542"
+  },
+  {
+   "FirstName": "Mariannette",
+   "MiddleName": "",
+   "Lastname": "Miller-Meeks",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "John",
+   "MiddleName": "",
+   "Lastname": "Moolenaar",
+   "CrpID": "N00036275"
+  },
+  {
+   "FirstName": "Alex",
+   "MiddleName": "",
+   "Lastname": "Mooney",
+   "CrpID": "N00033814"
+  },
+  {
+   "FirstName": "Blake",
+   "MiddleName": "",
+   "Lastname": "Moore",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Gwen",
+   "MiddleName": "",
+   "Lastname": "Moore",
+   "CrpID": "N00026914"
+  },
+  {
+   "FirstName": "Barry",
+   "MiddleName": "",
+   "Lastname": "Moore",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Joe",
+   "MiddleName": "",
+   "Lastname": "Morelle",
+   "CrpID": "N00043207"
+  },
+  {
+   "FirstName": "Seth",
+   "MiddleName": "",
+   "Lastname": "Moulton",
+   "CrpID": "N00035431"
+  },
+  {
+   "FirstName": "Frank",
+   "MiddleName": "",
+   "Lastname": "Mrvan",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Markwayne",
+   "MiddleName": "",
+   "Lastname": "Mullin",
+   "CrpID": "N00033410"
+  },
+  {
+   "FirstName": "Greg",
+   "MiddleName": "",
+   "Lastname": "Murphy",
+   "CrpID": "N00044027"
+  },
+  {
+   "FirstName": "Stephanie",
+   "MiddleName": "",
+   "Lastname": "Murphy",
+   "CrpID": "N00040133"
+  },
+  {
+   "FirstName": "Jerrold",
+   "MiddleName": "",
+   "Lastname": "Nadler",
+   "CrpID": "N00000939"
+  },
+  {
+   "FirstName": "Grace",
+   "MiddleName": "F.",
+   "Lastname": "Napolitano",
+   "CrpID": "N00006789"
+  },
+  {
+   "FirstName": "Richard",
+   "MiddleName": "E.",
+   "Lastname": "Neal",
+   "CrpID": "N00000153"
+  },
+  {
+   "FirstName": "Joe",
+   "MiddleName": "",
+   "Lastname": "Neguse",
+   "CrpID": "N00041080"
+  },
+  {
+   "FirstName": "Troy",
+   "MiddleName": "",
+   "Lastname": "Nehls",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Dan",
+   "MiddleName": "",
+   "Lastname": "Newhouse",
+   "CrpID": "N00036403"
+  },
+  {
+   "FirstName": "Marie",
+   "MiddleName": "",
+   "Lastname": "Newman",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Donald",
+   "MiddleName": "W.",
+   "Lastname": "Norcross",
+   "CrpID": "N00036154"
+  },
+  {
+   "FirstName": "Ralph",
+   "MiddleName": "",
+   "Lastname": "Norman",
+   "CrpID": "N00027783"
+  },
+  {
+   "FirstName": "Eleanor",
+   "MiddleName": "Holmes",
+   "Lastname": "Norton",
+   "CrpID": "N00001692"
+  },
+  {
+   "FirstName": "Devin",
+   "MiddleName": "",
+   "Lastname": "Nunes",
+   "CrpID": "N00007248"
+  },
+  {
+   "FirstName": "Tom",
+   "MiddleName": "",
+   "Lastname": "O'Halleran",
+   "CrpID": "N00037515"
+  },
+  {
+   "FirstName": "Jay",
+   "MiddleName": "",
+   "Lastname": "Obernolte",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Alexandria",
+   "MiddleName": "",
+   "Lastname": "Ocasio-Cortez",
+   "CrpID": "N00041162"
+  },
+  {
+   "FirstName": "Ilhan",
+   "MiddleName": "",
+   "Lastname": "Omar",
+   "CrpID": "N00043581"
+  },
+  {
+   "FirstName": "Burgess",
+   "MiddleName": "",
+   "Lastname": "Owens",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Steven",
+   "MiddleName": "",
+   "Lastname": "Palazzo",
+   "CrpID": "N00031958"
+  },
+  {
+   "FirstName": "Frank",
+   "MiddleName": "",
+   "Lastname": "Pallone",
+   "CrpID": "N00000781"
+  },
+  {
+   "FirstName": "Gary",
+   "MiddleName": "",
+   "Lastname": "Palmer",
+   "CrpID": "N00035691"
+  },
+  {
+   "FirstName": "Jimmy",
+   "MiddleName": "",
+   "Lastname": "Panetta",
+   "CrpID": "N00038601"
+  },
+  {
+   "FirstName": "Chris",
+   "MiddleName": "",
+   "Lastname": "Pappas",
+   "CrpID": "N00042161"
+  },
+  {
+   "FirstName": "Bill",
+   "MiddleName": "",
+   "Lastname": "Pascrell",
+   "CrpID": "N00000751"
+  },
+  {
+   "FirstName": "Donald",
+   "MiddleName": "M.",
+   "Lastname": "Payne",
+   "CrpID": "N00034639"
+  },
+  {
+   "FirstName": "Nancy",
+   "MiddleName": "",
+   "Lastname": "Pelosi",
+   "CrpID": "N00007360"
+  },
+  {
+   "FirstName": "Greg",
+   "MiddleName": "",
+   "Lastname": "Pence",
+   "CrpID": "N00041956"
+  },
+  {
+   "FirstName": "Ed",
+   "MiddleName": "",
+   "Lastname": "Perlmutter",
+   "CrpID": "N00027510"
+  },
+  {
+   "FirstName": "Scott",
+   "MiddleName": "",
+   "Lastname": "Perry",
+   "CrpID": "N00034120"
+  },
+  {
+   "FirstName": "Scott",
+   "MiddleName": "",
+   "Lastname": "Peters",
+   "CrpID": "N00033591"
+  },
+  {
+   "FirstName": "August",
+   "MiddleName": "",
+   "Lastname": "Pfluger",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Dean",
+   "MiddleName": "",
+   "Lastname": "Phillips",
+   "CrpID": "N00041134"
+  },
+  {
+   "FirstName": "Chellie",
+   "MiddleName": "",
+   "Lastname": "Pingree",
+   "CrpID": "N00013817"
+  },
+  {
+   "FirstName": "Stacey",
+   "MiddleName": "",
+   "Lastname": "Plaskett",
+   "CrpID": "N00035000"
+  },
+  {
+   "FirstName": "Mark",
+   "MiddleName": "",
+   "Lastname": "Pocan",
+   "CrpID": "N00033549"
+  },
+  {
+   "FirstName": "Katie",
+   "MiddleName": "",
+   "Lastname": "Porter",
+   "CrpID": "N00040865"
+  },
+  {
+   "FirstName": "Bill",
+   "MiddleName": "",
+   "Lastname": "Posey",
+   "CrpID": "N00029662"
+  },
+  {
+   "FirstName": "Ayanna",
+   "MiddleName": "",
+   "Lastname": "Pressley",
+   "CrpID": "N00042581"
+  },
+  {
+   "FirstName": "David",
+   "MiddleName": "E.",
+   "Lastname": "Price",
+   "CrpID": "N00002260"
+  },
+  {
+   "FirstName": "Mike",
+   "MiddleName": "",
+   "Lastname": "Quigley",
+   "CrpID": "N00030581"
+  },
+  {
+   "FirstName": "Amata",
+   "MiddleName": "Coleman",
+   "Lastname": "Radewagen",
+   "CrpID": "N00007635"
+  },
+  {
+   "FirstName": "Jamie",
+   "MiddleName": "",
+   "Lastname": "Raskin",
+   "CrpID": "N00037036"
+  },
+  {
+   "FirstName": "Tom",
+   "MiddleName": "",
+   "Lastname": "Reed",
+   "CrpID": "N00030949"
+  },
+  {
+   "FirstName": "Guy",
+   "MiddleName": "",
+   "Lastname": "Reschenthaler",
+   "CrpID": "N00041871"
+  },
+  {
+   "FirstName": "Kathleen",
+   "MiddleName": "",
+   "Lastname": "Rice",
+   "CrpID": "N00035927"
+  },
+  {
+   "FirstName": "Tom",
+   "MiddleName": "",
+   "Lastname": "Rice",
+   "CrpID": "N00033832"
+  },
+  {
+   "FirstName": "Cedric",
+   "MiddleName": "",
+   "Lastname": "Richmond",
+   "CrpID": "N00030184"
+  },
+  {
+   "FirstName": "Mike",
+   "MiddleName": "D.",
+   "Lastname": "Rogers",
+   "CrpID": "N00024759"
+  },
+  {
+   "FirstName": "Harold",
+   "MiddleName": "",
+   "Lastname": "Rogers",
+   "CrpID": "N00003473"
+  },
+  {
+   "FirstName": "John",
+   "MiddleName": "",
+   "Lastname": "Rose",
+   "CrpID": "N00041599"
+  },
+  {
+   "FirstName": "Matt",
+   "MiddleName": "",
+   "Lastname": "Rosendale",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Deborah",
+   "MiddleName": "",
+   "Lastname": "Ross",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "David",
+   "MiddleName": "",
+   "Lastname": "Rouzer",
+   "CrpID": "N00033527"
+  },
+  {
+   "FirstName": "Chip",
+   "MiddleName": "",
+   "Lastname": "Roy",
+   "CrpID": "N00042268"
+  },
+  {
+   "FirstName": "Lucille",
+   "MiddleName": "",
+   "Lastname": "Roybal-Allard",
+   "CrpID": "N00006671"
+  },
+  {
+   "FirstName": "Raul",
+   "MiddleName": "",
+   "Lastname": "Ruiz",
+   "CrpID": "N00033510"
+  },
+  {
+   "FirstName": "C.A. Dutch",
+   "MiddleName": "",
+   "Lastname": "Ruppersberger",
+   "CrpID": "N00025482"
+  },
+  {
+   "FirstName": "Bobby",
+   "MiddleName": "L.",
+   "Lastname": "Rush",
+   "CrpID": "N00004887"
+  },
+  {
+   "FirstName": "John",
+   "MiddleName": "",
+   "Lastname": "Rutherford",
+   "CrpID": "N00039777"
+  },
+  {
+   "FirstName": "Tim",
+   "MiddleName": "",
+   "Lastname": "Ryan",
+   "CrpID": "N00025280"
+  },
+  {
+   "FirstName": "Gregorio",
+   "MiddleName": "Kilili Camacho",
+   "Lastname": "Sablan",
+   "CrpID": "N00030418"
+  },
+  {
+   "FirstName": "Maria",
+   "MiddleName": "Elvira",
+   "Lastname": "Salazar",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Michael",
+   "MiddleName": "",
+   "Lastname": "San Nicolas",
+   "CrpID": "N00042619"
+  },
+  {
+   "FirstName": "Linda",
+   "MiddleName": "T.",
+   "Lastname": "Sánchez",
+   "CrpID": "N00024870"
+  },
+  {
+   "FirstName": "John",
+   "MiddleName": "",
+   "Lastname": "Sarbanes",
+   "CrpID": "N00027751"
+  },
+  {
+   "FirstName": "Steve",
+   "MiddleName": "",
+   "Lastname": "Scalise",
+   "CrpID": "N00009660"
+  },
+  {
+   "FirstName": "Mary",
+   "MiddleName": "Gay",
+   "Lastname": "Scanlon",
+   "CrpID": "N00042706"
+  },
+  {
+   "FirstName": "Jan",
+   "MiddleName": "",
+   "Lastname": "Schakowsky",
+   "CrpID": "N00004724"
+  },
+  {
+   "FirstName": "Adam",
+   "MiddleName": "B.",
+   "Lastname": "Schiff",
+   "CrpID": "N00009585"
+  },
+  {
+   "FirstName": "Brad",
+   "MiddleName": "",
+   "Lastname": "Schneider",
+   "CrpID": "N00033101"
+  },
+  {
+   "FirstName": "Kurt",
+   "MiddleName": "",
+   "Lastname": "Schrader",
+   "CrpID": "N00030071"
+  },
+  {
+   "FirstName": "Kim",
+   "MiddleName": "",
+   "Lastname": "Schrier",
+   "CrpID": "N00041606"
+  },
+  {
+   "FirstName": "David",
+   "MiddleName": "",
+   "Lastname": "Schweikert",
+   "CrpID": "N00006460"
+  },
+  {
+   "FirstName": "David",
+   "MiddleName": "",
+   "Lastname": "Scott",
+   "CrpID": "N00024871"
+  },
+  {
+   "FirstName": "Robert",
+   "MiddleName": "C.",
+   "Lastname": "Scott",
+   "CrpID": "N00002147"
+  },
+  {
+   "FirstName": "Austin",
+   "MiddleName": "",
+   "Lastname": "Scott",
+   "CrpID": "N00032457"
+  },
+  {
+   "FirstName": "Pete",
+   "MiddleName": "",
+   "Lastname": "Sessions",
+   "CrpID": "N00005681"
+  },
+  {
+   "FirstName": "Terri",
+   "MiddleName": "",
+   "Lastname": "Sewell",
+   "CrpID": "N00030622"
+  },
+  {
+   "FirstName": "Brad",
+   "MiddleName": "",
+   "Lastname": "Sherman",
+   "CrpID": "N00006897"
+  },
+  {
+   "FirstName": "Mikie",
+   "MiddleName": "",
+   "Lastname": "Sherrill",
+   "CrpID": "N00041154"
+  },
+  {
+   "FirstName": "Mike",
+   "MiddleName": "",
+   "Lastname": "Simpson",
+   "CrpID": "N00006263"
+  },
+  {
+   "FirstName": "Albio",
+   "MiddleName": "",
+   "Lastname": "Sires",
+   "CrpID": "N00027523"
+  },
+  {
+   "FirstName": "Elissa",
+   "MiddleName": "",
+   "Lastname": "Slotkin",
+   "CrpID": "N00041357"
+  },
+  {
+   "FirstName": "Jason",
+   "MiddleName": "",
+   "Lastname": "Smith",
+   "CrpID": "N00035282"
+  },
+  {
+   "FirstName": "Adrian",
+   "MiddleName": "",
+   "Lastname": "Smith",
+   "CrpID": "N00027623"
+  },
+  {
+   "FirstName": "Adam",
+   "MiddleName": "",
+   "Lastname": "Smith",
+   "CrpID": "N00007833"
+  },
+  {
+   "FirstName": "Christopher",
+   "MiddleName": "H.",
+   "Lastname": "Smith",
+   "CrpID": "N00009816"
+  },
+  {
+   "FirstName": "Lloyd",
+   "MiddleName": "",
+   "Lastname": "Smucker",
+   "CrpID": "N00038781"
+  },
+  {
+   "FirstName": "Darren",
+   "MiddleName": "",
+   "Lastname": "Soto",
+   "CrpID": "N00037422"
+  },
+  {
+   "FirstName": "Abigail",
+   "MiddleName": "",
+   "Lastname": "Spanberger",
+   "CrpID": "N00041418"
+  },
+  {
+   "FirstName": "Victoria",
+   "MiddleName": "",
+   "Lastname": "Spartz",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Jackie",
+   "MiddleName": "",
+   "Lastname": "Speier",
+   "CrpID": "N00029649"
+  },
+  {
+   "FirstName": "Greg",
+   "MiddleName": "",
+   "Lastname": "Stanton",
+   "CrpID": "N00041750"
+  },
+  {
+   "FirstName": "Pete",
+   "MiddleName": "",
+   "Lastname": "Stauber",
+   "CrpID": "N00041511"
+  },
+  {
+   "FirstName": "Michelle",
+   "MiddleName": "",
+   "Lastname": "Steel",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Elise",
+   "MiddleName": "",
+   "Lastname": "Stefanik",
+   "CrpID": "N00035523"
+  },
+  {
+   "FirstName": "Bryan",
+   "MiddleName": "",
+   "Lastname": "Steil",
+   "CrpID": "N00043379"
+  },
+  {
+   "FirstName": "Greg",
+   "MiddleName": "",
+   "Lastname": "Steube",
+   "CrpID": "N00042808"
+  },
+  {
+   "FirstName": "Haley",
+   "MiddleName": "",
+   "Lastname": "Stevens",
+   "CrpID": "N00040915"
+  },
+  {
+   "FirstName": "Chris",
+   "MiddleName": "",
+   "Lastname": "Stewart",
+   "CrpID": "N00033932"
+  },
+  {
+   "FirstName": "Steve",
+   "MiddleName": "",
+   "Lastname": "Stivers",
+   "CrpID": "N00029574"
+  },
+  {
+   "FirstName": "Marilyn",
+   "MiddleName": "",
+   "Lastname": "Strickland",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Thomas",
+   "MiddleName": "",
+   "Lastname": "Suozzi",
+   "CrpID": "N00038742"
+  },
+  {
+   "FirstName": "Eric",
+   "MiddleName": "",
+   "Lastname": "Swalwell",
+   "CrpID": "N00033508"
+  },
+  {
+   "FirstName": "Mark",
+   "MiddleName": "",
+   "Lastname": "Takano",
+   "CrpID": "N00006701"
+  },
+  {
+   "FirstName": "Van",
+   "MiddleName": "",
+   "Lastname": "Taylor",
+   "CrpID": "N00027709"
+  },
+  {
+   "FirstName": "Claudia",
+   "MiddleName": "",
+   "Lastname": "Tenney",
+   "CrpID": "N00036351"
+  },
+  {
+   "FirstName": "Mike",
+   "MiddleName": "",
+   "Lastname": "Thompson",
+   "CrpID": "N00007419"
+  },
+  {
+   "FirstName": "Bennie",
+   "MiddleName": "",
+   "Lastname": "Thompson",
+   "CrpID": "N00003288"
+  },
+  {
+   "FirstName": "Glenn",
+   "MiddleName": "",
+   "Lastname": "Thompson",
+   "CrpID": "N00029736"
+  },
+  {
+   "FirstName": "Tom",
+   "MiddleName": "",
+   "Lastname": "Tiffany",
+   "CrpID": "N00045307"
+  },
+  {
+   "FirstName": "William",
+   "MiddleName": "",
+   "Lastname": "Timmons",
+   "CrpID": "N00042715"
+  },
+  {
+   "FirstName": "Dina",
+   "MiddleName": "",
+   "Lastname": "Titus",
+   "CrpID": "N00030191"
+  },
+  {
+   "FirstName": "Rashida",
+   "MiddleName": "",
+   "Lastname": "Tlaib",
+   "CrpID": "N00042649"
+  },
+  {
+   "FirstName": "Paul",
+   "MiddleName": "",
+   "Lastname": "Tonko",
+   "CrpID": "N00030196"
+  },
+  {
+   "FirstName": "Norma",
+   "MiddleName": "",
+   "Lastname": "Torres",
+   "CrpID": "N00036107"
+  },
+  {
+   "FirstName": "Ritchie",
+   "MiddleName": "",
+   "Lastname": "Torres",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Lori",
+   "MiddleName": "",
+   "Lastname": "Trahan",
+   "CrpID": "N00041808"
+  },
+  {
+   "FirstName": "David",
+   "MiddleName": "",
+   "Lastname": "Trone",
+   "CrpID": "N00039122"
+  },
+  {
+   "FirstName": "Michael",
+   "MiddleName": "R.",
+   "Lastname": "Turner",
+   "CrpID": "N00025175"
+  },
+  {
+   "FirstName": "Lauren",
+   "MiddleName": "",
+   "Lastname": "Underwood",
+   "CrpID": "N00041569"
+  },
+  {
+   "FirstName": "Fred",
+   "MiddleName": "",
+   "Lastname": "Upton",
+   "CrpID": "N00004133"
+  },
+  {
+   "FirstName": "David",
+   "MiddleName": "",
+   "Lastname": "Valadao",
+   "CrpID": "N00033367"
+  },
+  {
+   "FirstName": "Jefferson",
+   "MiddleName": "",
+   "Lastname": "Van Drew",
+   "CrpID": "N00042164"
+  },
+  {
+   "FirstName": "Beth",
+   "MiddleName": "",
+   "Lastname": "Van Duyne",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Juan",
+   "MiddleName": "",
+   "Lastname": "Vargas",
+   "CrpID": "N00007021"
+  },
+  {
+   "FirstName": "Marc",
+   "MiddleName": "",
+   "Lastname": "Veasey",
+   "CrpID": "N00033839"
+  },
+  {
+   "FirstName": "Filemon",
+   "MiddleName": "",
+   "Lastname": "Vela",
+   "CrpID": "N00034349"
+  },
+  {
+   "FirstName": "Nydia",
+   "MiddleName": "M.",
+   "Lastname": "Velázquez",
+   "CrpID": "N00001102"
+  },
+  {
+   "FirstName": "Ann",
+   "MiddleName": "",
+   "Lastname": "Wagner",
+   "CrpID": "N00033106"
+  },
+  {
+   "FirstName": "Tim",
+   "MiddleName": "",
+   "Lastname": "Walberg",
+   "CrpID": "N00026368"
+  },
+  {
+   "FirstName": "Jackie",
+   "MiddleName": "",
+   "Lastname": "Walorski",
+   "CrpID": "N00031226"
+  },
+  {
+   "FirstName": "Michael",
+   "MiddleName": "",
+   "Lastname": "Waltz",
+   "CrpID": "N00042403"
+  },
+  {
+   "FirstName": "Debbie",
+   "MiddleName": "",
+   "Lastname": "Wasserman Schultz",
+   "CrpID": "N00026106"
+  },
+  {
+   "FirstName": "Maxine",
+   "MiddleName": "",
+   "Lastname": "Waters",
+   "CrpID": "N00006690"
+  },
+  {
+   "FirstName": "Bonnie",
+   "MiddleName": "",
+   "Lastname": "Watson Coleman",
+   "CrpID": "N00036158"
+  },
+  {
+   "FirstName": "Randy",
+   "MiddleName": "",
+   "Lastname": "Weber",
+   "CrpID": "N00033539"
+  },
+  {
+   "FirstName": "Daniel",
+   "MiddleName": "",
+   "Lastname": "Webster",
+   "CrpID": "N00026335"
+  },
+  {
+   "FirstName": "Peter",
+   "MiddleName": "",
+   "Lastname": "Welch",
+   "CrpID": "N00000515"
+  },
+  {
+   "FirstName": "Brad",
+   "MiddleName": "",
+   "Lastname": "Wenstrup",
+   "CrpID": "N00033310"
+  },
+  {
+   "FirstName": "Bruce",
+   "MiddleName": "",
+   "Lastname": "Westerman",
+   "CrpID": "N00035527"
+  },
+  {
+   "FirstName": "Jennifer",
+   "MiddleName": "",
+   "Lastname": "Wexton",
+   "CrpID": "N00041002"
+  },
+  {
+   "FirstName": "Susan",
+   "MiddleName": "",
+   "Lastname": "Wild",
+   "CrpID": "N00041997"
+  },
+  {
+   "FirstName": "Roger",
+   "MiddleName": "",
+   "Lastname": "Williams",
+   "CrpID": "N00030602"
+  },
+  {
+   "FirstName": "Nikema",
+   "MiddleName": "",
+   "Lastname": "Williams",
+   "CrpID": ""
+  },
+  {
+   "FirstName": "Joe",
+   "MiddleName": "",
+   "Lastname": "Wilson",
+   "CrpID": "N00024809"
+  },
+  {
+   "FirstName": "Frederica",
+   "MiddleName": "",
+   "Lastname": "Wilson",
+   "CrpID": "N00030650"
+  },
+  {
+   "FirstName": "Robert",
+   "MiddleName": "J.",
+   "Lastname": "Wittman",
+   "CrpID": "N00029459"
+  },
+  {
+   "FirstName": "Steve",
+   "MiddleName": "",
+   "Lastname": "Womack",
+   "CrpID": "N00031857"
+  },
+  {
+   "FirstName": "Ron",
+   "MiddleName": "",
+   "Lastname": "Wright",
+   "CrpID": "N00042240"
+  },
+  {
+   "FirstName": "John",
+   "MiddleName": "",
+   "Lastname": "Yarmuth",
+   "CrpID": "N00028073"
+  },
+  {
+   "FirstName": "Don",
+   "MiddleName": "",
+   "Lastname": "Young",
+   "CrpID": "N00007999"
+  },
+  {
+   "FirstName": "Lee",
+   "MiddleName": "",
+   "Lastname": "Zeldin",
+   "CrpID": "N00029404"
+  }
+ ]
+}
