@@ -61,7 +61,23 @@ The projects, as well as significant subfiles, are listed below. All subfolders 
 
 ## API Endpoints
 
-TODO - DESCRIBE WHY WE HAVE EACH
+The custom backend currently supports two endpoints. They both accept GET requests with query parameters over HTTPS. They do not support HTTP requests, or any other request types or methods. 
+
+### Bills - https://api.fundstovotes.info/billstest?member_id=K000388
+
+Purpose: Given a member of Congress's congressional ID, return a list of all bills they've recently voted on. Correlate the Primary Subject of each bill with an OpenSecrets industry, and return all data as a JSON object. 
+
+Data sources: 
+- [Propublica Members API](https://projects.propublica.org/api-docs/congress-api/members/) - Get a Specific Member’s Vote Positions
+- [Propublica Bills API](https://projects.propublica.org/api-docs/congress-api/bills/) - Get a Specific Bill
+- [Library of Congress](https://www.congress.gov/search?q={%22source%22:%22legislation%22,%22congress%22:117}&searchResultViewType=expanded) - List of Primary Subjects on left sidebar, hardcoded in
+- [OpenSecrets Industry Codes](https://www.opensecrets.org/open-data/api-documentation) - List of Industries as recognized by OpenSecrets, hardcoded in. Data found in the CRP_IDs.xls spreadsheet. 
+
+### Topten - https://api.fundstovotes.info/topten?name=Pelosi,Nancy
+
+Purpose: Given a member of Congress's name, return a list of the top ten industries that contributed to their campaign, as reported by OpenSecrets. OpenSecrets has a very low limit on the amount of queries it accepts per day (200), so these queries have to be run through a backend to be practical. 
+
+The backend code in the api-call folder periodically fetches this data, and stores it in the Funds to Votes TopTen database. This endpoint then queries the internal Funds to Votes database, rather than querying OpenSecrets directly. 
 
 ## Contributing
 
