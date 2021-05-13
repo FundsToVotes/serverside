@@ -32,13 +32,11 @@ The projects, as well as significant subfiles, are listed below. All subfolders 
     - `handlers` - a package containing the logic for each API endpoint
         + `billsAndIndustries.go` - code for the Bills endpoint
         + `topTen.go` - code for the topten endpoint
-            + TODO - ACTUALLY MAKE THIS FILE
         + `dummybillsAndIndustries.go` - hardcoded example data for testing the bills and industries endpoint
             - Note: This is currently out of date, due to restructuring
         + `dummytop10Industries.go` - hardcoded example data for testing the top10 endpoint
         + `data_structures.go` - type declarations for every Struct used in this folder
         + `cors.go` - handler code for CORS preflight request security. 
-            + This code should probably never need to be modified
         + `hello.go` - a basic "Hello World" endpoint used to confirm whether the gateway is online
 - **db** - This contains the configuration files for the repo used by the topten endpoint. 
     - Dockerfile for building the docker container
@@ -61,7 +59,7 @@ The projects, as well as significant subfiles, are listed below. All subfolders 
 
 ## API Endpoints
 
-The custom backend currently supports two endpoints. They both accept GET requests with query parameters over HTTPS. They do not support HTTP requests, or any other request types or methods. 
+The custom backend currently supports two endpoints. They both accept GET requests over HTTPS, and use query parameters. They do not support HTTP requests, or any other request types or methods. 
 
 ### Bills - https://api.fundstovotes.info/billstest?member_id=K000388
 
@@ -73,11 +71,15 @@ Data sources:
 - [Library of Congress](https://www.congress.gov/search?q={%22source%22:%22legislation%22,%22congress%22:117}&searchResultViewType=expanded) - List of Primary Subjects on left sidebar, hardcoded in
 - [OpenSecrets Industry Codes](https://www.opensecrets.org/open-data/api-documentation) - List of Industries as recognized by OpenSecrets, hardcoded in. Data found in the CRP_IDs.xls spreadsheet. 
 
+Query Parameter: `member_id`. An ID corresponding to a Member of Congress. This parameter is also known as a representative's "Biography Number". It can be found as the "id" parameter in Propublica API data responses. 
+
 ### Topten - https://api.fundstovotes.info/topten?name=Pelosi,Nancy
 
-Purpose: Given a member of Congress's name, return a list of the top ten industries that contributed to their campaign, as reported by OpenSecrets. OpenSecrets has a very low limit on the amount of queries it accepts per day (200), so these queries have to be run through a backend to be practical. 
+Purpose: Given a member of Congress's name, return a list of the top ten industries that contributed to their campaign, as reported by OpenSecrets. OpenSecrets has a very low limit on the amount of queries it accepts per day (200), so these queries should be run through a backend. 
 
 The backend code in the api-call folder periodically fetches this data, and stores it in the Funds to Votes TopTen database. This endpoint then queries the internal Funds to Votes database, rather than querying OpenSecrets directly. 
+
+Query Parameter `name`. A representative's name, in "Lastname,Firstname" format. 
 
 ## Contributing
 
@@ -103,9 +105,9 @@ If you're a member of a future iSchool Capstone team who intends to improve upon
 4. Follow the individual contributer steps 1 - 3
 5. Get started! Come up with a list of new features or improvements you want to add, and begin implementing them. 
 
-## Hosting <TODO - significant revision on this section>
+## Hosting
 
-The Gateway folder in this project is hosted on an AWS EC2 instance inside a Docker container. The Dattabase folder is hosted as a seperate Docker container on that same instance. 
+The Gateway folder in this project is hosted on an AWS EC2 instance inside a Docker container. The Docker container built from the db folder is hosted as a seperate Docker container on that same instance. 
 
 Upon `ssh`ing into the EC2 instance, you can run the command `docker ps -a` to see whether or not these containers are running. 
 
@@ -116,26 +118,37 @@ Helper scripts can be found in any folder that gets built and deployed to the EC
 The helper scripts: 
 - `build.sh` - builds a Go executable, then builds a Docker container in the current directory, according to Dockerfile
 - `deploy.sh` - builds a Docker container via the `build.sh` script, pushes it to Dockerhub, then `ssh`s into the EC2 server. It then runs the `inside_aws_script.sh` script. 
-- `inside_aws_script.sh` - Stops the existing Docker Container, pulls the new container from Dockerhub, then runs it. This script is *only* intended to be called as part of `deploy.sh`, it should not be run on its' own. 
+- `inside_aws_script.sh` - Stops the existing Docker Container, pulls the new container from Dockerhub, then runs it. This script is *only* intended to be called as part of `deploy.sh`, it should not be run on its own. 
 -  `run_docker_locally` - a debugging tool. Rather than building and deploying to the remote server, this script runs a built Docker container on the local development computer. 
     - Note: You will need to create self-signed certificates on your computer for this to work. 
     - Additional warning: This script is not kept up to date with the current version of the Gateway script. It is only updated when the primary developer has a need to test on their local machine. Therefore, it may or may not be working. 
 
 
-## API Keys - TODO UPDATE THIS FOR THE SERVERSIDE API KEYS
+## API Keys and Enviroment Variables
 
 To use this application, you need to obtain API Keys for: 
 
-- [Google Civic Information API](https://developers.google.com/civic-information/docs/using_api#APIKey)
+- [OpenSecrets](https://www.opensecrets.org/api/admin/index.php)
+    + We have one registered with the hello@fundstovotes.info account. Future capstone teams, ask us for the credentials!
 - [ProPublica Congress API](https://www.propublica.org/datastore/api/propublica-congress-api)
-- [ProPublica Campaign Finance API](https://www.propublica.org/datastore/api/campaign-finance-api)
+    + You can use the same one that you're using for the Clientside code
 
 Store them in a file called `.env` at the root of your cloned repository. It should look like this before you fill in your keys:
 ```
-REACT_APP_GOOGLE_API_KEY=
-REACT_APP_PROPUBLICA_CAMPAIGN_FINANCE_API_KEY=
-REACT_APP_PROPUBLICA_CONGRESS_API_KEY=
+GATEWAY_PORT=:443
+REMOTE_SERVER_LOGIN=
+SERVERSIDE_APP_PROPUBLICA_CONGRESS_API_KEY=
+SERVERSIDE_OPENSECRETS_API_KEY=
+MYSQL_ROOT_PASSWORD=
+MYSQL_DATABASE=ftvBackEnd
 ```
+Variable explanations 
+- `GATEWAY_PORT` - Port that the Gateway listens for requests on
+- `REMOTE_SERVER_LOGIN` - Login information for the Amazon EC2 Remote server. Should be in format `ec2-user@{{{IP_ADDRESS}}}.us-west-2.compute.amazonaws.com`
+- `SERVERSIDE_APP_PROPUBLICA_CONGRESS_API_KEY` - API key for Propublica Congress API
+- `SERVERSIDE_OPENSECRETS_API_KEY` - API key for Opensecrets API
+- `MYSQL_ROOT_PASSWORD` - Root password for the internal MySql database used for the TopTen endpoint
+- `MYSQL_DATABASE` - Name of the internal MySQL database
 
 ## Tips, Tutorials, and Tools
 
