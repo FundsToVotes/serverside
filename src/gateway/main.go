@@ -5,13 +5,22 @@ import (
 	"log"
 	"net/http"
 	"os"
+
+	"github.com/joho/godotenv"
 )
 
 //main is the main entry point for the server
 func main() {
+	//This code is untested!
+	// loads values from .env into the system
+	if err := godotenv.Load(); err != nil {
+		log.Fatal("No .env file found")
+	}
+	//
+
 	//Read the ADDR environment variable to get the address
 	//	the server should listen on. If empty, default to ":80"
-	addr := os.Getenv("ADDR")
+	addr := os.Getenv("GATEWAY_PORT")
 	if len(addr) == 0 {
 		addr = ":443"
 	}

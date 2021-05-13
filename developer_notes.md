@@ -105,5 +105,15 @@ missing: construction sector
     * the endpoint to fetch from: 
     * notes on the fetching process: 
 
+
+## Places where the enviroment variables should be used
+process.env.REACT_APP_GOOGLE_API_KEY in js
+https://dev.to/jakewitcher/using-env-files-for-environment-variables-in-python-applications-55a1 has the docker command for using them
+
+tlskey and tlscert are hardcoded in for now
+
+REMOTE_SERVER_LOGIN in every deploy script
+
+billandindustries.go - propublica congress api key
 ## Tips, Code Snippets, and Shortcuts
 * In Visual Studio Code, `ctrl+k v` will render the preview of this page and any other markdown page

@@ -6,6 +6,7 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
+	"os"
 	//_ "github.com/go-sql-driver/mysql"
 )
 
@@ -19,6 +20,15 @@ TODO - ADD A SENATE CALL
 func main() {
 	log.Printf("The bills visualization!")
 
+	//THE FOLLOWING CODE IS UNTESTED
+	propublicaCongressAPIKey := os.Getenv("SERVERSIDE_APP_PROPUBLICA_CONGRESS_API_KEY")
+
+	if len(propublicaCongressAPIKey) == 0 {
+		log.Fatal("Error - could not find SERVERSIDE_APP_PROPUBLICA_CONGRESS_API_KEY enviroment variable")
+	}
+
+	//END UNTESTED CODE
+
 	client := &http.Client{}
 
 	request_url := "https://api.propublica.org/congress/v1/117/house/members.json"
@@ -28,7 +38,7 @@ func main() {
 	}
 
 	req.Header.Set("User-Agent", "Golang_Funds_To_Votes_Bot")
-	req.Header.Set("X-API-Key", "bUEZbt82MwpoNooSEbGjITvWKC703nY2isRQVa5Y")
+	req.Header.Set("X-API-Key", propublicaCongressAPIKey)
 
 	response, err := client.Do(req)
 	if err != nil {

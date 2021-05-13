@@ -48,8 +48,17 @@ func main() {
 		log.Fatalln(err)
 	}
 
+	//THE FOLLOWING CODE IS UNTESTED
+	propublicaCongressAPIKey := os.Getenv("SERVERSIDE_APP_PROPUBLICA_CONGRESS_API_KEY")
+
+	if len(propublicaCongressAPIKey) == 0 {
+		log.Fatal("Error - could not find SERVERSIDE_APP_PROPUBLICA_CONGRESS_API_KEY enviroment variable")
+	}
+
+	//END UNTESTED CODE
+
 	req.Header.Set("User-Agent", "Golang_Funds_To_Votes_Bot")
-	req.Header.Set("X-API-Key", "bUEZbt82MwpoNooSEbGjITvWKC703nY2isRQVa5Y")
+	req.Header.Set("X-API-Key", propublicaCongressAPIKey)
 
 	response, err := client.Do(req)
 	if err != nil {
@@ -105,7 +114,7 @@ func main() {
 			}
 
 			req.Header.Set("User-Agent", "Golang_Funds_To_Votes_Bot")
-			req.Header.Set("X-API-Key", "bUEZbt82MwpoNooSEbGjITvWKC703nY2isRQVa5Y")
+			req.Header.Set("X-API-Key", propublicaCongressAPIKey)
 
 			response, err := client.Do(req)
 			if err != nil {

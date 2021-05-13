@@ -6,12 +6,23 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
+	"os"
 	"strconv"
 	"strings"
 )
 
 //BillsHandler returns Alma Adams's JSON data, and nobody else's. It does check that a name was provided
 func BillsHandler(w http.ResponseWriter, r *http.Request) {
+
+	//THE FOLLOWING CODE IS UNTESTED
+	propublicaCongressAPIKey := os.Getenv("SERVERSIDE_APP_PROPUBLICA_CONGRESS_API_KEY")
+
+	if len(propublicaCongressAPIKey) == 0 {
+		log.Fatal("Error - could not find SERVERSIDE_APP_PROPUBLICA_CONGRESS_API_KEY enviroment variable")
+	}
+
+	//END UNTESTED CODE
+
 	//Add an HTTP headers to the response with the name
 	w.Header().Set("Content-Type", "application/json")
 
@@ -31,7 +42,7 @@ func BillsHandler(w http.ResponseWriter, r *http.Request) {
 	//member_id := "K000388" //For Debugging
 
 	//Fetch all bills a member of congress has recently voted on
-	membersAPIResponse, err := fetch_member_bills(member_id)
+	membersAPIResponse, err := fetch_member_bills(member_id, propublicaCongressAPIKey)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -51,7 +62,7 @@ func BillsHandler(w http.ResponseWriter, r *http.Request) {
 
 			//TODO - PUT THE "IF LATEST ACTION IS A DESRIRABLE ONE" STATEMENT HERE
 			//fmt.Println(eachMembersBill)
-			billsAPIResponse, err := fetch_bill_details(bill_slug)
+			billsAPIResponse, err := fetch_bill_details(bill_slug, propublicaCongressAPIKey)
 			if err != nil {
 				log.Fatal(err)
 			}
@@ -147,7 +158,7 @@ func isActuallyABill(question string, bill_id string) bool {
 }
 
 //This function fetches the bills the member of congress has recently voted on
-func fetch_member_bills(member_id string) (*MembersAPIResponse, error) {
+func fetch_member_bills(member_id string, propublicaCongressAPIKey string) (*MembersAPIResponse, error) {
 	//Create the HTTP Request
 	client := &http.Client{}
 	request_url := "https://api.propublica.org/congress/v1/members/" + member_id + "/votes.json"
@@ -158,7 +169,7 @@ func fetch_member_bills(member_id string) (*MembersAPIResponse, error) {
 
 	//Set the Request headers
 	req.Header.Set("User-Agent", "Golang_Funds_To_Votes_Bot")
-	req.Header.Set("X-API-Key", "bUEZbt82MwpoNooSEbGjITvWKC703nY2isRQVa5Y")
+	req.Header.Set("X-API-Key", propublicaCongressAPIKey)
 
 	//Make the request
 	response, err := client.Do(req)
@@ -182,7 +193,7 @@ func fetch_member_bills(member_id string) (*MembersAPIResponse, error) {
 }
 
 //This function fetches bill details
-func fetch_bill_details(bill_slug string) (*BillsAPIResponse, error) {
+func fetch_bill_details(bill_slug string, propublicaCongressAPIKey string) (*BillsAPIResponse, error) {
 	//Create the Http Request
 	client := &http.Client{}
 	request_url := "https://api.propublica.org/congress/v1/117/bills/" + bill_slug + ".json"
@@ -193,7 +204,7 @@ func fetch_bill_details(bill_slug string) (*BillsAPIResponse, error) {
 
 	//Set the Request Headers
 	req.Header.Set("User-Agent", "Golang_Funds_To_Votes_Bot")
-	req.Header.Set("X-API-Key", "bUEZbt82MwpoNooSEbGjITvWKC703nY2isRQVa5Y")
+	req.Header.Set("X-API-Key", propublicaCongressAPIKey)
 
 	//Make the request
 	response, err := client.Do(req)

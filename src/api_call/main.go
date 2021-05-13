@@ -70,6 +70,15 @@ func main() {
 
 	//Managing the data
 	crp_ids := readCSV()
+
+	//THE FOLLOWING CODE IS UNTESTED
+	openSecretsAPIKey := os.Getenv("SERVERSIDE_OPENSECRETS_API_KEY")
+
+	if len(openSecretsAPIKey) == 0 {
+		log.Fatal("Error - could not find SERVERSIDE_OPENSECRETS_API_KEY enviroment variable")
+	}
+
+	//END UNTESTED CODE
 	for count, id := range crp_ids {
 		//Skipped Count = 0 for now
 		if 7 < count && count < 50 {
@@ -77,7 +86,7 @@ func main() {
 
 			client := &http.Client{}
 
-			request_url := "http://www.opensecrets.org/api/?method=candIndustry&cid=" + id[0] + "&cycle=2020&apikey=c3fd74a75e5cb8756e262e8d2f0480b3&output=json"
+			request_url := "http://www.opensecrets.org/api/?method=candIndustry&cid=" + id[0] + "&cycle=2020&apikey=" + openSecretsAPIKey + "&output=json"
 			req, err := http.NewRequest("GET", request_url, nil)
 			if err != nil {
 				log.Fatalln(err)
