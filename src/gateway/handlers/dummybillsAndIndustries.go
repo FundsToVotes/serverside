@@ -1,7 +1,6 @@
 package handlers
 
 import (
-	"fmt"
 	"net/http"
 )
 
@@ -9,19 +8,6 @@ import (
 func DummyBillsHandler(w http.ResponseWriter, r *http.Request) {
 	//Add an HTTP headers to the response with the name
 	w.Header().Set("Content-Type", "application/json")
-
-	//Get the `url` query string parameter value from the request.
-	keys, ok := r.URL.Query()["name"]
-
-	//If not supplied, respond with an http.StatusBadRequest error.
-	if !ok || len(keys[0]) < 1 || len(keys) < 1 {
-		w.WriteHeader(http.StatusBadRequest)
-		http.Error(w, "StatusBadRequestError: Please provide a representative name", 400)
-		return
-	}
-
-	key := keys[0]
-	fmt.Println("Request made for Representative " + key)
 
 	jsonData := `{
 		"top10IndustriesResponse": {

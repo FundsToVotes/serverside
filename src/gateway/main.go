@@ -5,17 +5,26 @@ import (
 	"log"
 	"net/http"
 	"os"
-
-	"github.com/joho/godotenv"
 )
 
 //main is the main entry point for the server
 func main() {
 	//This code is untested!
 	// loads values from .env into the system
-	if err := godotenv.Load(); err != nil {
-		log.Fatal("No .env file found")
-	}
+	/*	if err := godotenv.Load("gatewayVariables.env"); err != nil {
+		//read working directory files
+		/*
+			files, err := ioutil.ReadDir("./")
+			if err != nil {
+				log.Fatal(err)
+			}
+
+			for _, f := range files {
+				fmt.Println(f.Name())
+			} */
+	//	log.Printf(err.Error())
+	//		log.Fatal("No .env file found")
+	//	} //Replaced with putting the env files in bash scripts for building the docker containers
 	//
 
 	//Read the ADDR environment variable to get the address
@@ -38,14 +47,22 @@ func main() {
 	if len(tlsKeyPath) == 0 {
 		log.Fatal("Error - could not find tlsCertPath enviroment variable")
 	}
+
+	//THE FOLLOWING CODE IS UNTESTED
+	propublicaCongressAPIKey := os.Getenv("SERVERSIDE_APP_PROPUBLICA_CONGRESS_API_KEY")
+
+	if len(propublicaCongressAPIKey) == 0 {
+		log.Fatal("In main, Error - could not find SERVERSIDE_APP_PROPUBLICA_CONGRESS_API_KEY enviroment variable")
+	}
+
 	//Create a new mux for the web server.
 	mux := http.NewServeMux()
 	//Tell the mux to call your handlers.SummaryHandler function
 	//	when the "/v1/summary" URL path is requested.
 	mux.HandleFunc("/hello", handlers.HelloHandler)
 	mux.HandleFunc("/topten", handlers.DummyTopTenHandler)
-	mux.HandleFunc("/bills", handlers.DummyBillsHandler)
-	mux.HandleFunc("/billstest", handlers.BillsHandler)
+	mux.HandleFunc("/billsdummy", handlers.DummyBillsHandler)
+	mux.HandleFunc("/bills", handlers.BillsHandler)
 
 	//Add the CORS middleware
 	corsWrappedMux := handlers.NewCORSMiddleware(mux)

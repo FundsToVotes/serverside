@@ -115,5 +115,7 @@ tlskey and tlscert are hardcoded in for now
 REMOTE_SERVER_LOGIN in every deploy script
 
 billandindustries.go - propublica congress api key
+
+rundocker.sh for the database - root password and database name
 ## Tips, Code Snippets, and Shortcuts
 * In Visual Studio Code, `ctrl+k v` will render the preview of this page and any other markdown page

@@ -1,5 +1,7 @@
-#Enviroment Variables file 
+#Enviroment Variables files 
 .env
+export_env_variables.sh
+#^^ supposedly matches any files with this name in any directory
 
 # Self signed certs
 privkey.pem
