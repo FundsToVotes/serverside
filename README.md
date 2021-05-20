@@ -17,6 +17,8 @@ This repository contains the serverside code for the Funds to Votes project. It 
 
 This repository is primarily written in Go. Each continuously running component of the code also includes a Dockerfile, and is intended to be run inside a Docker container. These containers are then deployed to our Amazon AWS instance using the helper .sh scripts. 
 
+**Please note:** Our frontend/clientside code, written in React, is stored in the [FundsToVotes-web repository](https://github.com/FundsToVotes/FundsToVotes-web). More general documentation about the project, as well as frontend-specific documentation can be found in the README of that repository.
+
 ## Project Architecture 
 
 Go expects to see all Go projects on your computer to live in one directory, your `$GOPATH`/src directory. This repository is currently configured with the expectation that your `$GOPATH` is the location where the repository has been cloned. 
@@ -59,7 +61,7 @@ The projects, as well as significant subfiles, are listed below. All subfolders 
 
 ## API Endpoints
 
-The custom backend currently supports two endpoints. They both accept GET requests over HTTPS, and use query parameters. They do not support HTTP requests, or any other request types or methods. 
+The custom backend currently supports two endpoints. They both accept GET requests over HTTPS, and use query parameters. They do not support HTTP requests, or any other request types or methods.
 
 ### Bills - https://api.fundstovotes.info/billstest?member_id=K000388
 
@@ -94,16 +96,7 @@ If you'd like to contribute to this repository as an individual, please follow t
 6. One of the project maintainers will review and merge your pull request as soon practical
     - If you don't hear from us within a few weeks, feel free to reach out at hello@fundstovotes.info and ask about an expected timeline
 
-If you're a member of a future iSchool Capstone team who intends to improve upon this project, please follow the following steps
-
-1. Contact us at hello@fundstovotes.info for transfer of hosting credentials, and other accounts
-    - On the serverside, this is the Docker Hub account, the domain name, and the AWS account.
-    - We'll also share with you the server IP and credentials for the AWS instance, so you can ssh into it. 
-2. Configure the domain name email services to forward to your own emails as well
-3. Make sure all team members have access to both project Github repos
-3. Review the existing code and documentation, and send any questions any questions you have
-4. Follow the individual contributer steps 1 - 3
-5. Get started! Come up with a list of new features or improvements you want to add, and begin implementing them. 
+If you're a future iSchool Capstone team that is interested in continuing this project, **please reach out** to us via email at hello@fundstovotes.info. We'd love to chat, provide advice, and assist with GitHub repo/DNS/hosting logistics! You can come up with a list of new features or improvements you want to add (we have several ideas), and begin implementing them.
 
 ## Hosting
 
