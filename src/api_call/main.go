@@ -81,7 +81,7 @@ func main() {
 
 	for count, id := range crp_ids {
 		//Skipped Count = 0 for now
-		if 50 < count && count < 100 {
+		if 50 < count && count < 52 {
 			log.Printf("Fetching and inserting crp_id " + id[0])
 
 			client := &http.Client{}

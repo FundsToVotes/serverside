@@ -60,8 +60,8 @@ func main() {
 	//Tell the mux to call your handlers.SummaryHandler function
 	//	when the "/v1/summary" URL path is requested.
 	mux.HandleFunc("/hello", handlers.HelloHandler)
-	mux.HandleFunc("/topten", handlers.DummyTopTenHandler)
-	mux.HandleFunc("/toptentest", handlers.TopTenHandler)
+	mux.HandleFunc("/toptendummy", handlers.DummyTopTenHandler)
+	mux.HandleFunc("/topten", handlers.TopTenHandler)
 	mux.HandleFunc("/billsdummy", handlers.DummyBillsHandler)
 	mux.HandleFunc("/bills", handlers.BillsHandler)
 
