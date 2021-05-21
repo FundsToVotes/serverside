@@ -4,7 +4,7 @@ source export_env_variables.sh
 docker stop ftvgateway
 docker rm -f ftvgateway
 docker pull jhoupps/ftvgateway
-docker run -d -p 443:443 -p 49152:3306 \
+docker run -d -p 443:443 \
 --name ftvgateway \
 --env TLSCERT="/etc/letsencrypt/live/api.fundstovotes.info/fullchain.pem" \
 --env TLSKEY="/etc/letsencrypt/live/api.fundstovotes.info/privkey.pem" \
@@ -12,6 +12,7 @@ docker run -d -p 443:443 -p 49152:3306 \
 --env SERVERSIDE_APP_PROPUBLICA_CONGRESS_API_KEY=$SERVERSIDE_APP_PROPUBLICA_CONGRESS_API_KEY \
 --env SERVERSIDE_OPENSECRETS_API_KEY=$SERVERSIDE_OPENSECRETS_API_KEY \
 -v /etc/letsencrypt:/etc/letsencrypt:ro \
+--net mysql-db-network \
 jhoupps/ftvgateway
 
 

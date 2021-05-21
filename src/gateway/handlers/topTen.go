@@ -1,9 +1,9 @@
 package handlers
 
 import (
-	"api_call/useDB"
 	"encoding/json"
 	"fmt"
+	"gateway/useDB_for_handler"
 	"log"
 	"net/http"
 
@@ -33,14 +33,14 @@ func TopTenHandler(w http.ResponseWriter, r *http.Request) {
 	//Todo - decide if this should go in main, not the handler code
 
 	//*********Managing the DB*******
-	db, err := useDB.Connect()
+	db, err := useDB_for_handler.Connect()
 	if err != nil {
 		log.Printf("Error %s when getting db connection", err)
 		return
 	}
 	defer db.Close()
 	log.Printf("Successfully connected to database")
-	err = useDB.CreateTopTenTable(db)
+	err = useDB_for_handler.CreateTopTenTable(db)
 	if err != nil {
 		log.Printf("Create top ten table failed with error %s", err)
 		return
@@ -49,7 +49,7 @@ func TopTenHandler(w http.ResponseWriter, r *http.Request) {
 	//Retrieve data from the internal database
 
 	//Select from DB
-	toptenToReturn, err := useDB.Select(db, crp_id)
+	toptenToReturn, err := useDB_for_handler.Select(db, crp_id)
 	if err != nil {
 		log.Printf("Main: Error in Selecting "+crp_id+", failed with error %s", err)
 		return

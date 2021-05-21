@@ -16,7 +16,7 @@ func dsn(dbName string) string {
 const (
 	username = "root"
 	password = "ftvInternal123"
-	hostname = "127.0.0.1:3306"
+	hostname = "172.18.0.3:3306" //ip address found with the command "docker network inspect mysql-db-network" on the remote server
 	dbname   = "ftvBackEnd"
 )
 
