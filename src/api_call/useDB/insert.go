@@ -27,21 +27,23 @@ func Insert(db *sql.DB, cp Congressperson) error {
 	cpI := cp.Response.Industries.Industry
 
 	log.Printf("Adding the following industries for candidate" + cpA.CandName)
-	for _, industry := range cpI {
-		fmt.Print(industry.Attributes.IndustryName + ", ")
-	}
-	fmt.Println("")
+	if len(cpI) > 0 { //TODO MAKE THIS AN EMPTY STRUCT INSTEAD
+		for _, industry := range cpI {
+			fmt.Print(industry.Attributes.IndustryName + ", ")
+		}
+		fmt.Println("")
 
-	res, err := stmt.ExecContext(ctx, trimmedName, cpA.Cid, cpA.Cycle, cpA.LastUpdated, time.Now(), cpI[0].Attributes.IndustryCode, cpI[0].Attributes.IndustryName, cpI[0].Attributes.Indivs, cpI[0].Attributes.Pacs, cpI[0].Attributes.Total)
-	if err != nil {
-		log.Printf("Error %s when inserting row into topTen table", err)
-		return err
+		res, err := stmt.ExecContext(ctx, trimmedName, cpA.Cid, cpA.Cycle, cpA.LastUpdated, time.Now(), cpI[0].Attributes.IndustryCode, cpI[0].Attributes.IndustryName, cpI[0].Attributes.Indivs, cpI[0].Attributes.Pacs, cpI[0].Attributes.Total)
+		if err != nil {
+			log.Printf("Error %s when inserting row into topTen table", err)
+			return err
+		}
+		rows, err := res.RowsAffected()
+		if err != nil {
+			log.Printf("Error %s when finding rows affected", err)
+			return err
+		}
+		log.Printf("%d congressperson records created ", rows)
 	}
-	rows, err := res.RowsAffected()
-	if err != nil {
-		log.Printf("Error %s when finding rows affected", err)
-		return err
-	}
-	log.Printf("%d congressperson records created ", rows)
 	return nil
 }
