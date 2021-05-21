@@ -58,7 +58,7 @@ func BillsHandler(w http.ResponseWriter, r *http.Request) {
 		bill_slug := strings.TrimSuffix(eachMembersBill.Bill.BillID, "-117")
 
 		//Check if in the list of bill Latest Actions we want
-		if true /*isActuallyABill(eachMembersBill.Question, eachMembersBill.Bill.BillID)*/ {
+		if isActuallyABill(eachMembersBill.Question, eachMembersBill.Result, eachMembersBill.Bill.BillID) {
 
 			//TODO - PUT THE "IF LATEST ACTION IS A DESRIRABLE ONE" STATEMENT HERE
 			//fmt.Println(eachMembersBill)
@@ -132,8 +132,8 @@ func BillsHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 //TODO - MAKE THIS UNDERSTANDABLE AND NOT GODAWFULLY ORGANIZED
-func isActuallyABill(question string, bill_id string) bool {
-	switch question {
+func isActuallyABill(question string, result string, bill_id string) bool {
+	/*switch question {
 	case
 		"On Motion to Suspend the Rules and Agree",
 		"On Motion to Suspend the Rules and Pass, as Amended",
@@ -141,8 +141,7 @@ func isActuallyABill(question string, bill_id string) bool {
 		"On Passage",
 		"On Agreeing to the Resolution",
 		"On Passage of the Bill",
-		"On the Joint Resolution",
-		"On the Cloture Motion":
+		"On the Joint Resolution":
 
 		switch bill_id {
 		case
@@ -154,7 +153,32 @@ func isActuallyABill(question string, bill_id string) bool {
 
 	}
 	fmt.Println("Rejected Question: " + question)
-	return false
+	return false  */
+
+	//Filter out amendments and house resolutions
+	switch question {
+	case
+		//House
+		"On Agreeing to the Amendment",
+		"On Agreeing to the Resolution",
+		"On Ordering the Previous Question",
+
+		//Senate
+		"On the Amendment",
+		"On the Motion to Proceed",
+		"On Cloture on the Motion to Proceed":
+		//Not sure if we want to exclude join resolutions, but, they aren't bills, so
+		//"On the Joint Resolution":
+		return false
+	}
+
+	//Filter based on result
+	//	if result != "Passed" || result != "Failed" { //filters out things like "Amendment Rejected"
+	//	return false
+	//	}
+
+	return true
+
 }
 
 //This function fetches the bills the member of congress has recently voted on
