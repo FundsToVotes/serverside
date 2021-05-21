@@ -3,9 +3,13 @@ package main
 import (
 	"api_call/useDB"
 	"encoding/csv"
+	"encoding/json"
 	"fmt"
+	"io/ioutil"
 	"log"
+	"net/http"
 	"os"
+	"strings"
 
 	_ "github.com/go-sql-driver/mysql"
 )
@@ -73,69 +77,67 @@ func main() {
 		log.Fatal("Error - could not find SERVERSIDE_OPENSECRETS_API_KEY enviroment variable")
 	}
 
-	/*
-		crp_ids := readCSV()
+	crp_ids := readCSV()
 
-			for count, id := range crp_ids {
-				//Skipped Count = 0 for now
-				if 50 < count && count < 100 {
-					log.Printf("Fetching and inserting crp_id " + id[0])
+	for count, id := range crp_ids {
+		//Skipped Count = 0 for now
+		if 50 < count && count < 100 {
+			log.Printf("Fetching and inserting crp_id " + id[0])
 
-					client := &http.Client{}
+			client := &http.Client{}
 
-					request_url := "http://www.opensecrets.org/api/?method=candIndustry&cid=" + id[0] + "&cycle=2020&apikey=" + openSecretsAPIKey + "&output=json"
-					req, err := http.NewRequest("GET", request_url, nil)
-					if err != nil {
-						log.Fatalln(err)
-					}
+			request_url := "http://www.opensecrets.org/api/?method=candIndustry&cid=" + id[0] + "&cycle=2020&apikey=" + openSecretsAPIKey + "&output=json"
+			req, err := http.NewRequest("GET", request_url, nil)
+			if err != nil {
+				log.Fatalln(err)
+			}
 
-					req.Header.Set("User-Agent", "Golang_Funds_To_Votes_Bot")
+			req.Header.Set("User-Agent", "Golang_Funds_To_Votes_Bot")
 
-					response, err := client.Do(req)
-					if err != nil {
-						log.Fatalln(err)
-					}
+			response, err := client.Do(req)
+			if err != nil {
+				log.Fatalln(err)
+			}
 
-					responseData, err := ioutil.ReadAll(response.Body)
-					if err != nil {
-						log.Printf("Error in reading response")
-						log.Fatal(err)
-					}
+			responseData, err := ioutil.ReadAll(response.Body)
+			if err != nil {
+				log.Printf("Error in reading response")
+				log.Fatal(err)
+			}
 
-					//Create an empty instance of a Congressperson to recieve JSON
-					congressperson := &useDB.Congressperson{}
-					json.Unmarshal(responseData, congressperson)
+			//Create an empty instance of a Congressperson to recieve JSON
+			congressperson := &useDB.Congressperson{}
+			json.Unmarshal(responseData, congressperson)
 
-					fmt.Println("~")
-					fmt.Println(congressperson.Response.Industries.Attributes.CandName)
-					fmt.Println()
+			fmt.Println("~")
+			fmt.Println(congressperson.Response.Industries.Attributes.CandName)
+			fmt.Println()
 
-					fmt.Println("Raw Json")
-					// Convert response body to string
-					bodyString := string(responseData)
-					fmt.Println(bodyString)
-					fmt.Println("")
+			fmt.Println("Raw Json")
+			// Convert response body to string
+			bodyString := string(responseData)
+			fmt.Println(bodyString)
+			fmt.Println("")
 
-					for _, industry := range congressperson.Response.Industries.Industry {
-						fmt.Print(industry.Attributes.IndustryName + ", ")
-					}
-					fmt.Println("")
+			for _, industry := range congressperson.Response.Industries.Industry {
+				fmt.Print(industry.Attributes.IndustryName + ", ")
+			}
+			fmt.Println("")
 
-					//Inserting into the db
-					err = useDB.Insert(db, *congressperson)
-					if err != nil {
-						if strings.HasPrefix(err.Error(), "Error 1062: Duplicate entry") {
-							log.Printf("Entry for member " + congressperson.Response.Industries.Attributes.CandName + " already exists, updating instead")
-							//UPDATE FUNCTION TO DO
-						} else {
-							log.Printf("Insert member "+congressperson.Response.Industries.Attributes.CandName+" failed with error %s", err)
-							return //TODO - DECIDE WHETHER OR NOT i WANT THE CODE TO RETURN UPON ONE PERSON ERRORING OUT
-						}
-					}
-
+			//Inserting into the db
+			err = useDB.Insert(db, *congressperson)
+			if err != nil {
+				if strings.HasPrefix(err.Error(), "Error 1062: Duplicate entry") {
+					log.Printf("Entry for member " + congressperson.Response.Industries.Attributes.CandName + " already exists, updating instead")
+					//UPDATE FUNCTION TO DO
+				} else {
+					log.Printf("Insert member "+congressperson.Response.Industries.Attributes.CandName+" failed with error %s", err)
+					return //TODO - DECIDE WHETHER OR NOT i WANT THE CODE TO RETURN UPON ONE PERSON ERRORING OUT
 				}
 			}
-	*/
+
+		}
+	}
 
 	//Retrieve data - This will not remain here in the long run, but is here for testing purposes
 	/* migrated to handler code

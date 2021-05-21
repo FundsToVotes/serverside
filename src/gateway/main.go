@@ -61,6 +61,7 @@ func main() {
 	//	when the "/v1/summary" URL path is requested.
 	mux.HandleFunc("/hello", handlers.HelloHandler)
 	mux.HandleFunc("/topten", handlers.DummyTopTenHandler)
+	mux.HandleFunc("/toptentest", handlers.TopTenHandler)
 	mux.HandleFunc("/billsdummy", handlers.DummyBillsHandler)
 	mux.HandleFunc("/bills", handlers.BillsHandler)
 

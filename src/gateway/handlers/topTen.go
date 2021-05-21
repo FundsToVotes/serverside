@@ -2,13 +2,19 @@ package handlers
 
 import (
 	"api_call/useDB"
+	"encoding/json"
 	"fmt"
 	"log"
 	"net/http"
+
+	_ "github.com/go-sql-driver/mysql"
 )
 
 //HelloHandler is a very basic handler for the purpose of getting a bare bones server up and running
-func NotYetWorkingTopTenHandler(w http.ResponseWriter, r *http.Request) {
+func TopTenHandler(w http.ResponseWriter, r *http.Request) {
+
+	//Add an HTTP headers to the response with the name
+	w.Header().Set("Content-Type", "application/json")
 
 	//Get the `url` query string parameter value from the request.
 	keys, ok := r.URL.Query()["crp_id"]
@@ -49,7 +55,13 @@ func NotYetWorkingTopTenHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	fmt.Println("name to return: " + toptenToReturn.Attributes.CandName)
-	fmt.Println("Industry1 to return: " + toptenToReturn.Industry[0].IndustryName)
+	//Finally, respond with a JSON-encoded version of the toptenToReturn struct.
+	enc := json.NewEncoder(w)
+	if err := enc.Encode(toptenToReturn); err != nil {
+		fmt.Printf("error encoding struct into JSON: %v\n", err)
+		w.WriteHeader(http.StatusInternalServerError)
+	}
+
+	//TODO - SOMETHIGN ABOUT CLOSING THE HTML STREAM TO AVOID WASTING RESOURCES
 
 }
